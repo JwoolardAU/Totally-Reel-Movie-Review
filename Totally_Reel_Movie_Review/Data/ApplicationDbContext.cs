@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Totally_Reel_Movie_Review.Models;
 
 namespace Totally_Reel_Movie_Review.Data
 {
@@ -12,5 +13,6 @@ namespace Totally_Reel_Movie_Review.Data
             : base(options)
         {
         }
+        public DbSet<Movie> Movies {get; set;}
     }
 }

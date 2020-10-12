@@ -1,31 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MHOLCOMB\\repos\\Totally-Reel-Movie-Review\\Totally_Reel_Movie_Review\\Totally_Reel_Movie_Review.csproj": {}
+    "/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/Totally_Reel_Movie_Review.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MHOLCOMB\\repos\\Totally-Reel-Movie-Review\\Totally_Reel_Movie_Review\\Totally_Reel_Movie_Review.csproj": {
+    "/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/Totally_Reel_Movie_Review.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MHOLCOMB\\repos\\Totally-Reel-Movie-Review\\Totally_Reel_Movie_Review\\Totally_Reel_Movie_Review.csproj",
+        "projectUniqueName": "/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/Totally_Reel_Movie_Review.csproj",
         "projectName": "Totally_Reel_Movie_Review",
-        "projectPath": "C:\\Users\\MHOLCOMB\\repos\\Totally-Reel-Movie-Review\\Totally_Reel_Movie_Review\\Totally_Reel_Movie_Review.csproj",
-        "packagesPath": "C:\\Users\\MHOLCOMB\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MHOLCOMB\\repos\\Totally-Reel-Movie-Review\\Totally_Reel_Movie_Review\\obj\\",
+        "projectPath": "/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/Totally_Reel_Movie_Review.csproj",
+        "packagesPath": "/Users/assyasellak/.nuget/packages/",
+        "outputPath": "/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MHOLCOMB\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/assyasellak/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,6 +39,7 @@
       },
       "frameworks": {
         "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -77,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.7.20366.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100-rc.1.20452.10/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -35,5 +35,14 @@
 /Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.genruntimeconfig.cache
 /Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.csproj.CopyComplete
 /Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/bin/Debug/netcoreapp3.1/package-lock.json
-/Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Razor/Pages/MoviePage.cshtml.g.cs
+/Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Razor/Pages/Movie Title.cshtml.g.cs
 /Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Razor/Pages/Trivia.cshtml.g.cs
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.csprojAssemblyReference.cache
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.AssemblyInfoInputs.cache
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.AssemblyInfo.cs
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.csproj.CoreCompileInputs.cache
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.MvcApplicationPartsAssemblyInfo.cache
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.RazorAssemblyInfo.cache
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.RazorAssemblyInfo.cs
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.dll
+/Users/assyasellak/Desktop/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/obj/Debug/netcoreapp3.1/Totally_Reel_Movie_Review.pdb

@@ -5042,16 +5042,16 @@
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-        var stickyContent = [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
+        var fixedMovieList = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
+        var stickyMovieList = [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
 
-        $(fixedContent).each(function (index, element) {
+        $(fixedMovieList).each(function (index, element) {
           var actualPadding = element.style.paddingRight;
           var calculatedPadding = $(element).css('padding-right');
           $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
         }); // Adjust sticky content margin
 
-        $(stickyContent).each(function (index, element) {
+        $(stickyMovieList).each(function (index, element) {
           var actualMargin = element.style.marginRight;
           var calculatedMargin = $(element).css('margin-right');
           $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
@@ -5067,8 +5067,8 @@
 
     _proto._resetScrollbar = function _resetScrollbar() {
       // Restore fixed content padding
-      var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-      $(fixedContent).each(function (index, element) {
+      var fixedMovieList = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
+      $(fixedMovieList).each(function (index, element) {
         var padding = $(element).data('padding-right');
         $(element).removeData('padding-right');
         element.style.paddingRight = padding ? padding : '';
@@ -5510,7 +5510,7 @@
 
       var showEvent = $.Event(this.constructor.Event.SHOW);
 
-      if (this.isWithContent() && this._isEnabled) {
+      if (this.isWithMovieList() && this._isEnabled) {
         $(this.element).trigger(showEvent);
         var shadowRoot = Util.findShadowRoot(this.element);
         var isInTheDom = $.contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
@@ -5523,7 +5523,7 @@
         var tipId = Util.getUID(this.constructor.NAME);
         tip.setAttribute('id', tipId);
         this.element.setAttribute('aria-describedby', tipId);
-        this.setContent();
+        this.setMovieList();
 
         if (this.config.animation) {
           $(tip).addClass(ClassName$6.FADE);
@@ -5659,7 +5659,7 @@
     } // Protected
     ;
 
-    _proto.isWithContent = function isWithContent() {
+    _proto.isWithMovieList = function isWithMovieList() {
       return Boolean(this.getTitle());
     };
 
@@ -5672,15 +5672,15 @@
       return this.tip;
     };
 
-    _proto.setContent = function setContent() {
+    _proto.setMovieList = function setMovieList() {
       var tip = this.getTipElement();
-      this.setElementContent($(tip.querySelectorAll(Selector$6.TOOLTIP_INNER)), this.getTitle());
+      this.setElementMovieList($(tip.querySelectorAll(Selector$6.TOOLTIP_INNER)), this.getTitle());
       $(tip).removeClass(ClassName$6.FADE + " " + ClassName$6.SHOW);
     };
 
-    _proto.setElementContent = function setElementContent($element, content) {
+    _proto.setElementMovieList = function setElementMovieList($element, content) {
       if (typeof content === 'object' && (content.nodeType || content.jquery)) {
-        // Content is a DOM node or a jQuery
+        // MovieList is a DOM node or a jQuery
         if (this.config.html) {
           if (!$(content).parent().is($element)) {
             $element.empty().append(content);
@@ -6090,8 +6090,8 @@
     var _proto = Popover.prototype;
 
     // Overrides
-    _proto.isWithContent = function isWithContent() {
-      return this.getTitle() || this._getContent();
+    _proto.isWithMovieList = function isWithMovieList() {
+      return this.getTitle() || this._getMovieList();
     };
 
     _proto.addAttachmentClass = function addAttachmentClass(attachment) {
@@ -6103,23 +6103,23 @@
       return this.tip;
     };
 
-    _proto.setContent = function setContent() {
+    _proto.setMovieList = function setMovieList() {
       var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
 
-      this.setElementContent($tip.find(Selector$7.TITLE), this.getTitle());
+      this.setElementMovieList($tip.find(Selector$7.TITLE), this.getTitle());
 
-      var content = this._getContent();
+      var content = this._getMovieList();
 
       if (typeof content === 'function') {
         content = content.call(this.element);
       }
 
-      this.setElementContent($tip.find(Selector$7.CONTENT), content);
+      this.setElementMovieList($tip.find(Selector$7.CONTENT), content);
       $tip.removeClass(ClassName$7.FADE + " " + ClassName$7.SHOW);
     } // Private
     ;
 
-    _proto._getContent = function _getContent() {
+    _proto._getMovieList = function _getMovieList() {
       return this.element.getAttribute('data-content') || this.config.content;
     };
 

@@ -56,9 +56,9 @@ using Totally_Reel_Movie_Review;
             __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper);
             __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_0);
             await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            if (!__tagHelperExecutionContext.Output.IsMovieListModified)
             {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
+                await __tagHelperExecutionContext.SetOutputMovieListAsync();
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
@@ -70,9 +70,9 @@ using Totally_Reel_Movie_Review;
             __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper);
             __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_1);
             await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
-            if (!__tagHelperExecutionContext.Output.IsContentModified)
+            if (!__tagHelperExecutionContext.Output.IsMovieListModified)
             {
-                await __tagHelperExecutionContext.SetOutputContentAsync();
+                await __tagHelperExecutionContext.SetOutputMovieListAsync();
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();

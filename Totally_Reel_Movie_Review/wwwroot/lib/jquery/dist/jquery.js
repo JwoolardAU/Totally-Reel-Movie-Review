@@ -1730,10 +1730,10 @@ getText = Sizzle.getText = function( elem ) {
 		}
 	} else if ( nodeType === 1 || nodeType === 9 || nodeType === 11 ) {
 
-		// Use textContent for elements
+		// Use textMovieList for elements
 		// innerText usage removed for consistency of new lines (jQuery #11153)
-		if ( typeof elem.textContent === "string" ) {
-			return elem.textContent;
+		if ( typeof elem.textMovieList === "string" ) {
+			return elem.textMovieList;
 		} else {
 
 			// Traverse its children
@@ -2126,7 +2126,7 @@ Expr = Sizzle.selectors = {
 		"contains": markFunction( function( text ) {
 			text = text.replace( runescape, funescape );
 			return function( elem ) {
-				return ( elem.textContent || getText( elem ) ).indexOf( text ) > -1;
+				return ( elem.textMovieList || getText( elem ) ).indexOf( text ) > -1;
 			};
 		} ),
 
@@ -2200,7 +2200,7 @@ Expr = Sizzle.selectors = {
 			return elem.selected === true;
 		},
 
-		// Contents
+		// MovieLists
 		"empty": function( elem ) {
 
 			// http://www.w3.org/TR/selectors/#empty-pseudo
@@ -4111,7 +4111,7 @@ jQuery.ready.then = readyList.then;
 
 // The ready event handler and self cleanup method
 function completed() {
-	document.removeEventListener( "DOMContentLoaded", completed );
+	document.removeEventListener( "DOMMovieListLoaded", completed );
 	window.removeEventListener( "load", completed );
 	jQuery.ready();
 }
@@ -4129,7 +4129,7 @@ if ( document.readyState === "complete" ||
 } else {
 
 	// Use the handy event callback
-	document.addEventListener( "DOMContentLoaded", completed );
+	document.addEventListener( "DOMMovieListLoaded", completed );
 
 	// A fallback to window.onload, that will always work
 	window.addEventListener( "load", completed );
@@ -5045,13 +5045,13 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 				tmp = fragment.firstChild;
 
 				// Ensure the created nodes are orphaned (#12392)
-				tmp.textContent = "";
+				tmp.textMovieList = "";
 			}
 		}
 	}
 
 	// Remove wrapper from fragment
-	fragment.textContent = "";
+	fragment.textMovieList = "";
 
 	i = 0;
 	while ( ( elem = nodes[ i++ ] ) ) {
@@ -6125,7 +6125,7 @@ function domManip( collection, args, callback, ignored ) {
 								}, doc );
 							}
 						} else {
-							DOMEval( node.textContent.replace( rcleanScript, "" ), node, doc );
+							DOMEval( node.textMovieList.replace( rcleanScript, "" ), node, doc );
 						}
 					}
 				}
@@ -6254,7 +6254,7 @@ jQuery.fn.extend( {
 				jQuery.text( this ) :
 				this.empty().each( function() {
 					if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
-						this.textContent = value;
+						this.textMovieList = value;
 					}
 				} );
 		}, null, value, arguments.length );
@@ -6305,7 +6305,7 @@ jQuery.fn.extend( {
 				jQuery.cleanData( getAll( elem, false ) );
 
 				// Remove any remaining nodes
-				elem.textContent = "";
+				elem.textMovieList = "";
 			}
 		}
 
@@ -9007,7 +9007,7 @@ var
 
 	// #7653, #8125, #8152: local protocol detection
 	rlocalProtocol = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
-	rnoContent = /^(?:GET|HEAD)$/,
+	rnoMovieList = /^(?:GET|HEAD)$/,
 	rprotocol = /^\/\//,
 
 	/* Prefilters
@@ -9129,7 +9129,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 	while ( dataTypes[ 0 ] === "*" ) {
 		dataTypes.shift();
 		if ( ct === undefined ) {
-			ct = s.mimeType || jqXHR.getResponseHeader( "Content-Type" );
+			ct = s.mimeType || jqXHR.getResponseHeader( "MovieList-Type" );
 		}
 	}
 
@@ -9569,7 +9569,7 @@ jQuery.extend( {
 		s.type = s.type.toUpperCase();
 
 		// Determine if request has content
-		s.hasContent = !rnoContent.test( s.type );
+		s.hasMovieList = !rnoMovieList.test( s.type );
 
 		// Save the URL in case we're toying with the If-Modified-Since
 		// and/or If-None-Match header later on
@@ -9577,7 +9577,7 @@ jQuery.extend( {
 		cacheURL = s.url.replace( rhash, "" );
 
 		// More options handling for requests with no content
-		if ( !s.hasContent ) {
+		if ( !s.hasMovieList ) {
 
 			// Remember the hash so we can put it back
 			uncached = s.url.slice( cacheURL.length );
@@ -9617,8 +9617,8 @@ jQuery.extend( {
 		}
 
 		// Set the correct header, if data is being sent
-		if ( s.data && s.hasContent && s.contentType !== false || options.contentType ) {
-			jqXHR.setRequestHeader( "Content-Type", s.contentType );
+		if ( s.data && s.hasMovieList && s.contentType !== false || options.contentType ) {
+			jqXHR.setRequestHeader( "MovieList-Type", s.contentType );
 		}
 
 		// Set the Accepts header for the server, depending on the dataType
@@ -10096,7 +10096,7 @@ jQuery.ajaxTransport( function( options ) {
 				try {
 
 					// Do send the request (this may raise an exception)
-					xhr.send( options.hasContent && options.data || null );
+					xhr.send( options.hasMovieList && options.data || null );
 				} catch ( e ) {
 
 					// #14683: Only rethrow if this hasn't been notified as an error yet

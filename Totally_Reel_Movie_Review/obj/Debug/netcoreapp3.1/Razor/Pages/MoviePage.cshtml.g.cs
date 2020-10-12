@@ -19,7 +19,7 @@ using Totally_Reel_Movie_Review;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0cdf5f46fc2a5d93102ef13edcea6ad93bf8d345", @"/Pages/MoviePage.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0cdf5f46fc2a5d93102ef13edcea6ad93bf8d345", @"/Pages/Movie Title.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d887497da2c273a3becaa93988ceea929a9cb784", @"/Pages/_ViewImports.cshtml")]
     public class Pages_MoviePage : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -27,7 +27,7 @@ using Totally_Reel_Movie_Review;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 3 "/Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/Pages/MoviePage.cshtml"
+#line 3 "/Users/assyasellak/Totally-Reel-Movie-Review/Totally_Reel_Movie_Review/Pages/Movie Title.cshtml"
   
     ViewData["Title"] = "Movie Title";
 
