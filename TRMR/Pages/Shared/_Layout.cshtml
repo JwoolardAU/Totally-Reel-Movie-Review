@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TRMR</title>
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+ 
+    <header class ="container-fluid text-center"> 
+    <h1><img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="30">TOTALLY REEL MOVIE REVIEW <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="30"></a></h1>
+    </header>
+
+<div  id="wrapper">
+    <nav> 
+    <a href="~/Index">Home</a>
+    &nbsp; &nbsp; &nbsp;&nbsp;
+    <a href="~/MovieList">Movie List</a>
+    &nbsp; &nbsp; &nbsp;&nbsp;
+    <a href="~/About">About</a>
+    &nbsp; &nbsp; &nbsp;&nbsp;
+    <a href="~/loginORregister.html">Login/Register</a>
+    </nav>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+ </div>
+
+<footer class="container-fluid fixed-bottom text-center">  
+Copyright &copy; 2020, Totally Reel Movie Review <br>
+<b>Please Contact Our </b> <a href="mailto:Jwoolard@augusta.edu">Admin Email</a> <b>For Any TRMR Questions </b> <br>
+</footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

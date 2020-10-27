@@ -1,0 +1,100 @@
+﻿
+header{
+  border-bottom: 5px solid #cbbcb9f5; 
+}
+
+footer {
+  border-top: 5px solid #604d53;
+  padding:5px 10px;
+  font-size: 10pt;
+  font-style: italic;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer,header {
+    font-family:serif;
+    background-color: #f0efeb;
+    color: #57737a;
+}
+
+h1{
+  font-size: 70px;
+  text-align:center;
+  margin-top: 0px;
+}
+
+body{  
+  margin: 0px 0px 50px 0px;
+}
+ 
+nav {
+  background-color: #57737a;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+a{ 
+  text-decoration: none;
+  color: #660000;
+}
+
+a:hover {
+  color: #FCFFF5;
+  background-color:grey;
+}
+
+main {
+  color: #193441;
+  background-color: #FCFFF5;
+  padding: 10px;
+  z-index: 0;
+}
+
+
+/*https://stackoverflow.com/questions/5306640/how-to-set-bullet-colors-in-ul-li-html-lists-via-css-without-using-any-images-or*/
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 1em; 
+  text-indent: -.7em;
+}
+
+.MovieList li::before {
+  content: '📽️';
+}
+
+.MovieFactList li::before {
+  content: "🎬";
+}
+
+.reviewList ul li::before{
+  list-style: none;
+  content: "";
+}
+
+.reviewList h3{
+  background-color: #57737a;
+  color: #f2f2f2;
+  padding: 5px 15px;
+}
+.reviewList a{
+  color: #cda1a6;
+}
+.reviewList{
+  overflow:auto;
+  clear:right;
+}
+

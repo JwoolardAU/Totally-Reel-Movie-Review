@@ -1,0 +1,38 @@
+
+@{string link = @Model.CurrentMovie.Title + ".png";}
+<img id="Movie_Poster_Pic" src="~/images/@link" alt="Movie Poster Pic" width="266" height="400" style="float:right;">
+<h2>@Model.CurrentMovie.Title</h2>
+
+<div class="MovieFactList">
+<ul>
+    <li>Movie Title: @Model.CurrentMovie.Title</li>
+    <li>Director: @Model.CurrentMovie.Director</li>
+    <li>Starring: @Model.CurrentMovie.Starring</li>
+    <li>Genre: @Model.CurrentMovie.Genre</li>
+    <li>Age Rating: @Model.CurrentMovie.Age_Rating</li>
+    <li>Cast</li>
+    <ul>
+          @foreach (var actor in Model.CurrentMovie.Cast)
+          {
+            <li>@actor</li>
+          }
+    </ul>
+</ul>
+</div>
+<h2>Movie Description</h2>
+<p>@Model.CurrentMovie.Details</p>
+
+<div class="reviewList">
+<h2>Reel Reviews</h2>
+@if(Model.Reviews.Count==0){<p>Don't be shy...wite a review!</p>}
+  <ul>
+        @foreach (var rev  in Model.Reviews)
+        {
+          <li>  
+            <p><h3>User <a href="profile.html">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i></h3>  
+  <strong><em><u>@rev.User_Name's Reel Review:</u></em></strong> @rev.Description
+  </p>  
+  </li>
+        }
+  </ul>
+</div>
