@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/assyasellak/TRMR/TRMR/TRMR.csproj": {}
+    "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/TRMR.csproj": {}
   },
   "projects": {
-    "/Users/assyasellak/TRMR/TRMR/TRMR.csproj": {
+    "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/TRMR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/assyasellak/TRMR/TRMR/TRMR.csproj",
+        "projectUniqueName": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
         "projectName": "TRMR",
-        "projectPath": "/Users/assyasellak/TRMR/TRMR/TRMR.csproj",
+        "projectPath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
         "packagesPath": "/Users/assyasellak/.nuget/packages/",
-        "outputPath": "/Users/assyasellak/TRMR/TRMR/obj/",
+        "outputPath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

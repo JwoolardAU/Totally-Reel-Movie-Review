@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/assyasellak/TRMR/TRMR/TRMR.csproj",
+  "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15585,83 +15585,83 @@
   "RootNamespace": "TRMR",
   "Documents": [
     {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/About.cshtml",
-      "TargetPath": "Pages\\About.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/MovieList.cshtml",
-      "TargetPath": "Pages\\MovieList.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Areas/Identity/Pages/_ViewStart.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Privacy.cshtml",
-      "TargetPath": "Pages\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Shared/_LoginPartial.cshtml",
-      "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Index.cshtml",
-      "TargetPath": "Pages\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Shared/_Layout.cshtml",
-      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Movies/The Matrix.cshtml",
-      "TargetPath": "Pages\\Movies\\The Matrix.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/_ViewImports.cshtml",
-      "TargetPath": "Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Movies/Lord of the Things.cshtml",
-      "TargetPath": "Pages\\Movies\\Lord of the Things.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Movies/The Dark Mode.cshtml",
-      "TargetPath": "Pages\\Movies\\The Dark Mode.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/_ViewStart.cshtml",
-      "TargetPath": "Pages\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Shared/_MoviePartial.cshtml",
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Shared/_MoviePartial.cshtml",
       "TargetPath": "Pages\\Shared\\_MoviePartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/assyasellak/TRMR/TRMR/Pages/Movies/Assembly: EndProcess.cshtml",
-      "TargetPath": "Pages\\Movies\\Assembly: EndProcess.cshtml",
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Areas/Identity/Pages/_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Shared/_LoginPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Movies/Lord of the Things.cshtml",
+      "TargetPath": "Pages\\Movies\\Lord of the Things.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Shared/_Layout.cshtml",
+      "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Movies/The Dark Mode.cshtml",
+      "TargetPath": "Pages\\Movies\\The Dark Mode.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Movies/The Matrix.cshtml",
+      "TargetPath": "Pages\\Movies\\The Matrix.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/_ViewImports.cshtml",
+      "TargetPath": "Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Privacy.cshtml",
+      "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/About.cshtml",
+      "TargetPath": "Pages\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Movies/Assembly EndProcess.cshtml",
+      "TargetPath": "Pages\\Movies\\Assembly EndProcess.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/MovieList.cshtml",
+      "TargetPath": "Pages\\MovieList.cshtml",
       "FileKind": "mvc"
     }
   ],
