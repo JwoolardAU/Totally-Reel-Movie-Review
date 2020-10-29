@@ -51,6 +51,9 @@ a:hover {
   color: #FCFFF5;
   background-color:grey;
 }
+a:link, a:hover {
+  text-decoration: none!important;
+} 
 
 main {
   color: #193441;

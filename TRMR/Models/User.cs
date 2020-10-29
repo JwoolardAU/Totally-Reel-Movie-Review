@@ -19,6 +19,7 @@ namespace  TRMR.Models
         public List<Review> Reviews{get; set;} = new List<Review> ();
         public String Status{get; set;}
         public String Tags {get; set;} 
+        public String Bio{get; set;}
 
     }
 }
