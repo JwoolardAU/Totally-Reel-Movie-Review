@@ -4,108 +4,120 @@
     ViewData["Title"] = "Home page";
 }
 
-
-
- <div id="Movie_Poster_Pic" >
-    <a href="TRMR_MovieReview.html">
-
-    </a>
-</div>
-
-<div>
-
-  <div class="row content">
-          <div class="col-sm-2 sidenav">
-
-           <div id="sidebar">
-              <div class="sidebar-header">
-                  <h3>Movie Genre</h3>
-              </div>
-      
-              <ul class="list-unstyled components">
-                   <li class="active">
-                   <li> <a href = ~/Suspense.html>Suspense </a></li>
-                   <li> <a href = RomComs.html>RomCom</a></li>
-                   <li> <a href = Horror.html>Horror</a></li>
-                   <li> <a href = Action.html>Action</a></li>
-                   <li> <a href = SciFi.html>SciFi</a></li>
-                   <li> <a href =  Drama.html> Drama </a></li>
-                   <li> <a href = Romance.html> Romance </a></li>
-                   <li> <a href = Thriller.html> Thriller </a></li>
-                   <li> <a href = Documentary.html> Documentary </a></li>
-                   <li> <a href = Adventure.html>Adventure</a></li>
-                   <li> <a href = Musical.html> Musical</a></li>
-                   <li> <a href =  Mystery.html> Mystery </a></li>
-                   <li> <a href = Comedy.html>Comedy</a></li>
-                   <li> <a href = Sport.html> Sport</a></li>
-                   <li> <a href = Short.html> Short </a></li>
-              </ul> 
-          </div>
-
-        </div>
-          <div class="col-sm-9">
-
-            <div class="row mx-auto">
-              <div class="col-sm-4 ">
-                <div class="text-left">
-                 <h3>Welcome Info</h3>
-                      </div>
-                              <h2>Top 10 Movies</h2>
-                    <ul>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                        <li>MOVIE ONE</li>
-                    </ul>
-                 <img  class="img-fluid mx-auto"  src="~/images/The Matrix.png" alt="Movie Poster Pic" width="267" height="400" > <!--src="PULL FROM DATABASE VARIABLE GOES HERE"-->
-
-               </div>
-                
-              <div class="col-sm-4 ">
-                <img  class="img-fluid mx-auto" src="~/images/Lord of the Things.png" alt="Movie Poster Pic" width="300" height="400" >
-                <div class="text-left">
-        <h2>Featured Films</h2>
-    <ul>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-    </ul>
-                </div>
-              </div>
-         <div class="col-sm-4">
-           <div class="text-left">
-        <h2>TOP 10 BEST MOVIES</h2>
-    <ul>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-        <li>MOVIE ONE</li>
-    </ul>
-           </div>
-              <img class="img-fluid mx-auto"  src="~/images/Assembly EndProcess.png" alt="Movie Poster Pic" width="300" height="400">
-        </div>
-        </div>
+<nav> 
+   <a href="~/Index" > <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
+   <a href="~/MovieList">Movie List</a>
+   <a href="~/About">About</a>
+   <a href="~/Login">Login/Register</a>
+   <input type="text" class="right" placeholder="Search a movie..">
+</nav>
+<div id="Welcome">
+<main role="main" class="pb-3">
+   <div class="row content">
+   <div class="col-sm-2 sidenav">
+      <div id="sidebar">
+         <div class="sidebar-header">
+            <h3>Movie Genres</h3>
+         </div>
+         <ul class="list-unstyled components">
+            <li><a href="~/MovieList#Suspense">Suspense </a></li>
+            <li><a href="~/MovieList#RomComs">RomCom</a></li>
+            <li><a href="~/MovieList#Horror">Horror</a></li>
+            <li><a href="~/MovieList#Action">Action</a></li>
+            <li><a href="~/MovieList#SciFi">SciFi</a></li>
+            <li><a href="~/MovieList#Drama"> Drama </a></li>
+            <li><a href="~/MovieList#Romance"> Romance </a></li>
+            <li><a href="~/MovieList#Thriller"> Thriller </a></li>
+            <li><a href="~/MovieList#Documentary"> Documentary </a></li>
+            <li><a href="~/MovieList#Adventure">Adventure</a></li>
+            <li><a href="~/MovieList#Musical"> Musical</a></li>
+            <li><a href="~/MovieList#Mystery"> Mystery </a></li>
+            <li><a href="~/MovieList#Comedy">Comedy</a></li>
+            <li><a href="~/MovieList#Sport"> Sport</a></li>
+            <li><a href="~/MovieList#Short"> Short </a></li>
+         </ul>
       </div>
-    </div>
-  </div>
-  
-</div>
+   </div>
+   <div class="col-sm-9">
+   <div class="row mx-auto">
+   <div class="col-xs-12 center-block text-center">
+   <h1>Welcome</h1>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+   </ol
+   <div class="container-fluid">
+      <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+         <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3 active">
+               <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png"alt="slide 1">
+            </div>
+            <div class="carousel-item col-md-3">
+               <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 2">
+            </div>
+            <div class="carousel-item col-md-3">
+               <img class="img-fluid mx-auto d-block" src="~/images/Assembly EndProcess.png" alt="slide 3">
+            </div>
+            <div class="carousel-item col-md-3">
+               <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png" alt="slide 4">
+            </div>
+            <div class="carousel-item col-md-3">
+               <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 5">
+            </div>
+            <div class="carousel-item col-md-3">
+               <img class="img-fluid mx-auto d-block"  src="~/images/Assembly EndProcess.png" alt="slide 6">
+            </div>
+         </div>
+         <div class="row mx-auto">
+            <div class="col-sm-4 ">
+               <h2>Top 10 Movies</h2>
+               <ul>
+                  <li>MOVIE ONE</li>
+                  <li>MOVIE TWO</li>
+                  <li>MOVIE THREE</li>
+                  <li>MOVIE FOUR</li>
+                  <li>MOVIE FIVE</li>
+                  <li>MOVIE SIX</li>
+                  <li>MOVIE SEVEN</li>
+                  <li>MOVIE EIGHT</li>
+                  <li>MOVIE NINE</li>
+                  <li>MOVIE TEN</li>
+               </ul>
+            </div>
+            <div class="col-sm-4 ">
+               <h2>Featured Films</h2>
+               <ul>
+                  <li>MOVIE</li>
+                  <li>MOVIE</li>
+                  <li>MOVIE </li>
+                  <li>MOVIE </li>
+                  <li>MOVIE</li>
+                  <li>MOVIE </li>
+                  <li>MOVIE </li>
+                  <li>MOVIE </li>
+                  <li>MOVIE </li>
+                  <li>MOVIE </li>
+               </ul>
+            </div>
+            <div class="col-sm-4">
+               <h2>Fan Favorites</h2>
+               <ul>
+                  <li>MOVIE ONE</li>
+                  <li>MOVIE TWO</li>
+                  <li>MOVIE THREE</li>
+                  <li>MOVIE FOUR</li>
+                  <li>MOVIE FIVE</li>
+                  <li>MOVIE SIX</li>
+                  <li>MOVIE SEVEN</li>
+                  <li>MOVIE EIGHT</li>
+                  <li>MOVIE NINE</li>
+                  <li>MOVIE TEN</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>

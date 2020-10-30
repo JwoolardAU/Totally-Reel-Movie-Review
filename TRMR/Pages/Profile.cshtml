@@ -1,0 +1,27 @@
+﻿@page
+@model TRMR.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+<nav> 
+   <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
+   <a href="~/MovieList">Movie List</a>
+   <a href="~/About">About</a>
+   <a href="~/Login">Login/Register</a>
+   <input type="text" class="right" placeholder="Search a movie..">
+</nav>
+<main>
+   <strong>
+      <u>
+         <h2> @Model.CurrentUser.User_Id's Review Page:</h2>
+      </u>
+   </strong>
+   <ul>
+      <div class="profileList">
+         <li><u>@Model.CurrentUser.User_Id's TRMR Join Date:</u> @Model.CurrentUser.Created </li>
+         <li><u>@Model.CurrentUser.User_Id's TRMR Status:</u> @Model.CurrentUser.Status </li>
+         <li><u>@Model.CurrentUser.User_Id's Genre Preferences:</u> @Model.CurrentUser.Tags </li>
+         <li><u>@Model.CurrentUser.User_Id's Bio:</u> @Model.CurrentUser.Bio </li>
+      </div>
+   </ul>
+</main>

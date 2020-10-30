@@ -79,8 +79,8 @@
 /Users/assyasellak/TRMR/TRMR/obj/Debug/net5.0/TRMR.genruntimeconfig.cache
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/appsettings.Development.json
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/appsettings.json
-/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/app.db
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/TRMR.StaticWebAssets.xml
+/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/app.db
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/TRMR.deps.json
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/TRMR.runtimeconfig.json
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/bin/Debug/net5.0/TRMR.runtimeconfig.dev.json
@@ -134,11 +134,14 @@
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/About.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Error.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Index.cshtml.g.cs
+/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Login.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/MovieList.cshtml.g.cs
+/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Movies/Assembly EndProcess.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Movies/Lord of the Things.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Movies/The Dark Mode.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Movies/The Matrix.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Privacy.cshtml.g.cs
+/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Profile.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Shared/_Layout.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Shared/_LoginPartial.cshtml.g.cs
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Shared/_MoviePartial.cshtml.g.cs
@@ -155,4 +158,3 @@
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/ref/TRMR.dll
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/TRMR.pdb
 /Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/TRMR.genruntimeconfig.cache
-/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/obj/Debug/net5.0/Razor/Pages/Movies/Assembly EndProcess.cshtml.g.cs

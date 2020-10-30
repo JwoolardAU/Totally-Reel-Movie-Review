@@ -1,103 +1,239 @@
-﻿
-header{
-  border-bottom: 5px solid #cbbcb9f5; 
+﻿footer {
+	font-size: 10pt;
+	font-style: italic;
+	width: 100%;
+	position: fixed;
+	font-family: serif;
+	background-color: #d0d0d0;
+	color: #57737a;
 }
 
-footer {
-  border-top: 5px solid #604d53;
-  padding:5px 10px;
-  font-size: 10pt;
-  font-style: italic;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+h3 {
+	font-size: 23px;
+	width: 160px
 }
 
-footer,header {
-    font-family:serif;
-    background-color: #f0efeb;
-    color: #57737a;
+h1 {
+	font-size: 70px;
+	text-align: center;
+	margin-top: 0px;
 }
 
-h1{
-  font-size: 70px;
-  text-align:center;
-  margin-top: 0px;
+body {
+	margin: 0px 0px 50px 0px;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
-body{  
-  margin: 0px 0px 50px 0px;
-}
- 
 nav {
-  background-color: #57737a;
-  overflow: hidden;
+	background-color: #57737a;
+	overflow: hidden;
+	top: 0;
+	z-index: 100;
+	position: fixed;
+	width: 100%;
 }
 
 nav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 17px;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 17px;
 }
 
-a{ 
-  text-decoration: none;
-  color: #660000;
+a {
+	text-decoration: none;
+	color: #000000;
 }
 
 a:hover {
-  color: #FCFFF5;
-  background-color:grey;
+	color: #FCFFF5;
+	background-color: grey;
+	text-decoration: none;
 }
-a:link, a:hover {
-  text-decoration: none!important;
-} 
+
+.active {
+	color: #FCFFF5;
+	background-color: grey;
+}
 
 main {
-  color: #193441;
-  background-color: #FCFFF5;
-  padding: 10px;
-  z-index: 0;
+	color: #193441;
+	background-color: #ffffff;
+	padding: 15px;
+	z-index: 0;
+	margin-top: 65px;
 }
 
 
 /*https://stackoverflow.com/questions/5306640/how-to-set-bullet-colors-in-ul-li-html-lists-via-css-without-using-any-images-or*/
+
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 li {
-  padding-left: 1em; 
-  text-indent: -.7em;
+	padding-left: 1em;
+	text-indent: -.7em;
 }
 
 .MovieList li::before {
-  content: '📽️';
+	content: '📽️';
 }
 
 .MovieFactList li::before {
-  content: "🎬";
+	content: "🎬";
 }
 
-.reviewList ul li::before{
-  list-style: none;
-  content: "";
+.reviewList ul li::before {
+	list-style: none;
+	content: "";
 }
 
-.reviewList h3{
-  background-color: #57737a;
-  color: #f2f2f2;
+.reviewList h3 {
+	background-color: #4e4f4f;
+	color: #f2f2f2;
   padding: 5px 15px;
-}
-.reviewList a{
-  color: #cda1a6;
-}
-.reviewList{
-  overflow:auto;
-  clear:right;
+  width:100%;
 }
 
+.reviewList a {
+	color: #aea8a8;
+}
+
+.reviewList {
+	overflow: auto;
+	clear: right;
+}
+
+#Welcome {
+	text-align: center;
+}
+
+#sidebar {
+	background-color: #bec8cb;
+	height: 100%;
+	padding: 7px 0px;
+	text-align: center;
+	margin-top: 50px;
+	position: fixed;
+	top: 0;
+	z-index: 0;
+}
+
+#sidebar a {
+	float: left;
+	color: #f2f2f2;
+	width: 100%;
+	padding: 12px 0px;
+	font-size: 17px;
+}
+
+#sidebar li {
+	padding: 0px;
+	margin: 0px;
+}
+
+#MovieIndex {
+	padding: 0px;
+}
+
+#MovieIndex h3 {
+	border-bottom: 1px dotted #7d7d7d;
+	margin-top: 30px;
+}
+
+#MovieIndex h2 {
+	text-align: center;
+	font-size: 50px;
+}
+
+#MovieDetails main,
+#MovieList main,
+#Welcome main {
+	padding: 0px;
+}
+
+.right {
+	float: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.left {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	position: relative;
+}
+
+.carousel {
+	width: 1000px;
+	height: 400px;
+}
+
+
+/* https://medium.com/wdstack/bootstrap-4-custom-carousel-94a537364fde */
+
+@media (min-width: 768px) {
+	/* show 3 items */
+	.carousel-inner .active,
+	.carousel-inner .active+.carousel-item,
+	.carousel-inner .active+.carousel-item+.carousel-item,
+	.carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+		display: block;
+	}
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item,
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+		transition: none;
+	}
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		position: relative;
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+		position: absolute;
+		top: 0;
+		right: -25%;
+		z-index: -1;
+		display: block;
+		visibility: visible;
+	}
+	/* left or forward direction */
+	.active.carousel-item-left+.carousel-item-next.carousel-item-left,
+	.carousel-item-next.carousel-item-left+.carousel-item,
+	.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+	.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item,
+	.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+		position: relative;
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+	/* farthest right hidden item must be abso position for animations */
+	.carousel-inner .carousel-item-prev.carousel-item-right {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		display: block;
+		visibility: visible;
+	}
+	/* right or prev direction */
+	.active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+	.carousel-item-prev.carousel-item-right+.carousel-item,
+	.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+	.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item,
+	.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+		position: relative;
+		transform: translate3d(100%, 0, 0);
+		visibility: visible;
+		display: block;
+		visibility: visible;
+	}
+}

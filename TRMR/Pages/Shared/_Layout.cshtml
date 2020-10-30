@@ -6,40 +6,31 @@
     <title>@ViewData["Title"] - TRMR</title>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/main.css" />
+    
 </head>
 <body>
  
-    <header class ="container-fluid text-center"> 
-    <h1><img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="30">TOTALLY REEL MOVIE REVIEW <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="30"></a></h1>
-    </header>
+
 
 <div  id="wrapper">
-    <nav> 
-    <a href="~/Index">Home</a>
-    &nbsp; &nbsp; &nbsp;&nbsp;
-    <a href="~/MovieList">Movie List</a>
-    &nbsp; &nbsp; &nbsp;&nbsp;
-    <a href="~/About">About</a>
-    &nbsp; &nbsp; &nbsp;&nbsp;
-    <a href="~/loginORregister.html">Login/Register</a>
-    </nav>
 
-    <div>
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+
+             @RenderBody()
+
+   
 
  </div>
 
 <footer class="container-fluid fixed-bottom text-center">  
-Copyright &copy; 2020, Totally Reel Movie Review <br>
-<b>Please Contact Our </b> <a href="mailto:Jwoolard@augusta.edu">Admin Email</a> <b>For Any TRMR Questions </b> <br>
+<div class="left">Copyright &copy; 2020, Totally Reel Movie Review </div>
+<div class="right"><b>Please Contact Our </b> <a href="mailto:Jwoolard@augusta.edu">Admin Email</a> <b>For Any TRMR Questions </b> <br></div>
 </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" ></script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

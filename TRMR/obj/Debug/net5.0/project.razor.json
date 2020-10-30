@@ -15600,6 +15600,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Login.cshtml",
+      "TargetPath": "Pages\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Shared/_LoginPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
@@ -15647,6 +15652,11 @@
     {
       "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/assyasellak/reppppp/Totally-Reel-Movie-Review/Totally-Reel-Movie-Review/TRMR/Pages/Profile.cshtml",
+      "TargetPath": "Pages\\Profile.cshtml",
       "FileKind": "mvc"
     },
     {
