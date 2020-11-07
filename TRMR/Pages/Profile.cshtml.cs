@@ -23,9 +23,24 @@ namespace TRMR.Pages
 
         public User CurrentUser{get; set;} 
 
-        public void OnGet()
+        public IActionResult OnGet(string userName) //ARGUMENT NAME HAS TO MATCH QUERY STRING METADATA NAME (I.E. "userName = blah")
         {
-            this.CurrentUser = _dbContext.User.Find("patrickarchy");//We need to find the user who matches the link that was clicked on
+           
+
+             if(userName == null)
+            {
+                return NotFound();
+            }
+
+            this.CurrentUser = _dbContext.User.Find(userName);
+
+            if(CurrentUser  == null)
+            {
+                return NotFound();
+            }
+
+            return Page();  
+
         }
     }
 }

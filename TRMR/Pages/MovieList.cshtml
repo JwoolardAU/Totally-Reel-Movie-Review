@@ -1,16 +1,18 @@
 @page
 @model MovieListModel
 @{
-    ViewData["Title"] = "MovieList";
+   ViewData["Title"] = "MovieList";
 }
 
-<nav> 
+   <nav> 
    <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
-   <a href="~/MovieList" class="active">Movie List</a>
-   <a href="~/About">About</a>
-   <a href="~/Login">Login/Register</a>
+   <a href="~/MovieList">Movie List</a>
+   <a href="~/About" >About</a>
+   <a href="~/Login" class="active">Login/Register</a>
+   <button class="right">Search!</button>
    <input type="text" class="right" placeholder="Search a movie..">
-</nav>
+   </nav>
+
 <div id="MovieList">
    <main role="main" class="pb-3">
       <div class="row content">
@@ -40,15 +42,15 @@
          </div>
          <div class="col-sm-9">
             <div id="MovieIndex">
-               <h2>List of Movie</h2>
+               <h2>List of Movies</h2>
                <div id="Suspense">
                   &nbsp;
                   <h3 >Suspense</h3>
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -58,8 +60,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -69,8 +71,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -80,8 +82,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -91,8 +93,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -102,8 +104,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -113,8 +115,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -124,8 +126,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -135,8 +137,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -146,8 +148,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -157,8 +159,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -168,8 +170,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -179,8 +181,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -190,8 +192,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>
@@ -201,8 +203,8 @@
                   <ul class="MovieList">
                      @foreach (var movie in Model.Movies)
                      {
-                     string link = @movie.Title;
-                     <li><a href = "/Movies/@link">@movie.Title</a></li>
+                     //string link = @movie.Title; //No longer needed
+                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
                      }
                   </ul>
                </div>

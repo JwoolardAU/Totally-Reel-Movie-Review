@@ -9,8 +9,7 @@
       "DEBUG",
       "NET",
       "NET5_0",
-      "NETCOREAPP",
-      "NETCOREAPP3_1"
+      "NETCOREAPP"
     ],
     "languageVersion": "9.0",
     "platform": "",
@@ -217,7 +216,6 @@
           "System.Linq.Parallel": "5.0.0.0",
           "System.Linq.Queryable": "5.0.0.0",
           "System.Memory.Reference": "5.0.0.0",
-          "System.Net.Connections": "5.0.0.0",
           "System.Net": "4.0.0.0",
           "System.Net.Http": "5.0.0.0",
           "System.Net.Http.Json": "5.0.0.0",
@@ -696,21 +694,9 @@
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
-      "System.Collections.Immutable/5.0.0-rc.1.20451.14": {
-        "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
-        }
-      },
-      "System.ComponentModel.Annotations/5.0.0-rc.1.20451.14": {
-        "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        }
-      },
-      "System.Diagnostics.DiagnosticSource/5.0.0-rc.1.20451.14": {
-        "compile": {
-          "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
-        }
-      },
+      "System.Collections.Immutable/5.0.0-rc.1.20451.14": {},
+      "System.ComponentModel.Annotations/5.0.0-rc.1.20451.14": {},
+      "System.Diagnostics.DiagnosticSource/5.0.0-rc.1.20451.14": {},
       "System.Memory/4.5.3": {},
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
         "compile": {
@@ -1825,12 +1811,6 @@
       "System.Memory.Reference/5.0.0.0": {
         "compile": {
           "System.Memory.dll": {}
-        },
-        "compileOnly": true
-      },
-      "System.Net.Connections/5.0.0.0": {
-        "compile": {
-          "System.Net.Connections.dll": {}
         },
         "compileOnly": true
       },
@@ -3623,11 +3603,6 @@
       "sha512": ""
     },
     "System.Memory.Reference/5.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Net.Connections/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

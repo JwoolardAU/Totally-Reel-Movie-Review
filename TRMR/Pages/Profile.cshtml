@@ -1,15 +1,17 @@
 ﻿@page
 @model TRMR.Pages.ProfileModel
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = Model.CurrentUser.User_Id + "'s " + "Profile";
 }
-<nav> 
+   <nav> 
    <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
    <a href="~/MovieList">Movie List</a>
-   <a href="~/About">About</a>
-   <a href="~/Login">Login/Register</a>
+   <a href="~/About" >About</a>
+   <a href="~/Login" class="active">Login/Register</a>
+   <button class="right">Search!</button>
    <input type="text" class="right" placeholder="Search a movie..">
-</nav>
+   </nav>
+
 <main>
    <strong>
       <u>
