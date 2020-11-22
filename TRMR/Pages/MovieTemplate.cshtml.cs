@@ -60,7 +60,7 @@ namespace TRMR.Pages
             _dbContext.Review.Add(TheReview);
             await _dbContext.SaveChangesAsync();
 
-            return Page();// Should just refresh page so you can see new review
+            return this.OnGet(id);// Should just refresh page so you can see new review
         }
 
 
