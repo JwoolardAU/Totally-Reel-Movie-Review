@@ -84,23 +84,23 @@
                   }
                </ul>
 
-               <form method="post">
                <h3 style="background-color: #3D7070;"> Share Your Reel Review</h3>
                @if (SignInManager.IsSignedIn(User)) //for testing you can just replace the conditional with "true" to see the page as if you were a signed in user 
                {
-                  <input asp-for="TheReview.Description" type="submit" value="Submit Review" style="position: relative; top: -50px;">
-                  <textarea id="RRTextBox" name="RRTextBox" rows="4" cols="50" placeholder="Write Your Own Reel Review"></textarea> <!-- In order for the placeholder text to appear, You have to have nothing (not even spaces) between the textarea tags -->
                   <p> Leave a Reel Review Score!</p>
-                  <input asp-for="TheReview.Rating" type="number" step="1" min="0" max="10" style="position: relative; top: -50px;">
-                  <input asp-for="TheReview.User_Name" type="hidden" value="User.Identity.Name">
-                  <input asp-for="TheReview.Movie_Id" type="hidden" value="Model.CurrentMovie.Id">
+                  <form method="post">
+                     <input asp-for="TheReview.Description" type="text">   
+                     <input asp-for="TheReview.Rating" type="number" step="1" min="0" max="10" style="position: relative; top: -50px;">
+                     <input asp-for="TheReview.User_Name" type="hidden" value="@User.Identity.Name">
+                     <input asp-for="TheReview.Movie_Id" type="hidden" value="@Model.CurrentMovie.Id">
+                     <input type="submit" value="Submit Review" style="position: relative; top: -50px;"> 
+                  </form>
+                  
                }
                else
                {
                   <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login To Post Your Reel Review!</a>
                }
-               </form>
-
             </div>
          </div>
       </div>
