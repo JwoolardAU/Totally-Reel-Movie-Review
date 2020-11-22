@@ -11,6 +11,7 @@ namespace  TRMR.Models
     {
         [Key]
         public String User_Id{get; set;}
+        
         public DateTime Created{get; set;}
         [Required]
         public string Email{get; set;}

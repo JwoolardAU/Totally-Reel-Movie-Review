@@ -43,5 +43,29 @@ namespace TRMR.Pages
 
             return Page();        
         }
+
+
+        [BindProperty]
+        public Review TheReview { get; set; }
+
+
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            
+            _dbContext.Review.Add(TheReview);
+            await _dbContext.SaveChangesAsync();
+
+            return Page();// Should just refresh page so you can see new review
+        }
+
+
+
+
+        
     }
 }

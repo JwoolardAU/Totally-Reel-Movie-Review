@@ -10,14 +10,16 @@ namespace  TRMR.Models
     public class Review
     {
         [Key]
-        public int User_Id{get; set;}
+        public int User_Id{get; set;} //Should be changed to ReviewNumber
         
         [ForeignKey("User")]
-        public String User_Name{get; set;}
+        public String User_Name{get; set;} // ??? Some reference to the built in AspNetUser table for the current user (the one writing the review)
         
         [ForeignKey("Movie")]
-        public int Movie_Id{get; set;}
-        public string Rating{ get; set; }
-        public string Description {get; set;}
+        public int Movie_Id{get; set;} //Get's filled in with @Model.CurrentMovie.Id
+
+        public string Rating{ get; set; } //Get's filled in with "leave your rating" selector 
+
+        public string Description {get; set;} //Get's filled in with "leave your own review" box
     }
 }
