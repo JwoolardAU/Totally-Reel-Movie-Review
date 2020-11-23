@@ -11,8 +11,11 @@
       <a href="~/MovieList">Movie List</a>
       <a href="~/About" >About</a>
       <a href="~/Login" class="active">Login/Register</a>
-      @if (SignInManager.IsSignedIn(User)){ //This needs to be cleaned up to look nicer and needs to be on every page (try adding to layout page)
-            <p>Currently Logged in as: @User.Identity.Name</p>
+      @if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
+         <a href="~/Login">Currently Logged in as: @User.Identity.Name</a>
+      }
+      else{
+         <a href="~/Login">Not Currently Logged In</a>
       }
       <button class="right">Search!</button>
       <input type="text" class="right" placeholder="Search a movie..">
@@ -59,9 +62,38 @@
    <div class="container-fluid">
       <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+
+            <!-- Needs to be able to work properly 
+            @{
+               int slideNum = 1;
+               string slideNumString = null;
+               string srcString = null;
+            }
+
+            @foreach (var movie in Model.Movies)
+            { 
+               <div class="carousel-item col-md-3 active">
+               
+
+                  
+                  slideNumString = slideNum.ToString();
+                  srcString = "~/images/" + movie.Title + ".png";
+                  
+                  
+                  <a href = "MovieTemplate?id=@movie.Id">
+                  <img class="img-fluid mx-auto d-block" src="@srcString" alt="slide @slideNumString">
+                  </a>
+
+                  slideNum++;
+                  
+               </div>
+            }
+            -->
+
+            <!-- Old implementation
             <div class="carousel-item col-md-3 active">
                <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png"alt="slide 1">
-            </div>
+            </div> 
             <div class="carousel-item col-md-3">
                <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 2">
             </div>
@@ -77,6 +109,8 @@
             <div class="carousel-item col-md-3">
                <img class="img-fluid mx-auto d-block"  src="~/images/Assembly EndProcess.png" alt="slide 6">
             </div>
+            -->
+
          </div>
          <div class="row mx-auto">
             <div class="col-sm-4 ">

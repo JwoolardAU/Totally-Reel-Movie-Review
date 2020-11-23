@@ -23,7 +23,7 @@ namespace TRMR.Pages
         public List<Movie> Movies = new List<Movie>();
         public void OnGet()
         {
-             this.Movies.AddRange(_dbContext.Movies);
+            this.Movies.AddRange(_dbContext.Movies);
          }
     }
 }
