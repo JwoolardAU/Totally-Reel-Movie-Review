@@ -25,7 +25,7 @@ namespace TRMR.Pages
 
         public void OnGet()
         {
-
+            this.Movies.AddRange(_dbContext.Movies);
         }
     }
 }

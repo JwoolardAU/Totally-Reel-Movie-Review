@@ -3,8 +3,8 @@
 @{
     ViewData["Title"] = Model.CurrentUser.User_Id + "'s " + "Profile";
 }
-@inject SignInManager<IdentityUser> SignInManager 
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager 
+@inject UserManager<ApplicationUser> UserManager
 
    <nav> 
    <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>

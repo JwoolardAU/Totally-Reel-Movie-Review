@@ -3,8 +3,8 @@
 @{
    ViewData["Title"] = "MovieList";
 }
-@inject SignInManager<IdentityUser> SignInManager 
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager 
+@inject UserManager<ApplicationUser> UserManager
 
    <nav> 
    <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
@@ -50,7 +50,7 @@
          </div>
          <div class="col-sm-9">
             <div id="MovieIndex">
-               <h2>List of Movies</h2>
+               <h2>List of Movie Genres</h2>
                <div id="Suspense">
                   &nbsp;
                   <h3 >Suspense</h3>

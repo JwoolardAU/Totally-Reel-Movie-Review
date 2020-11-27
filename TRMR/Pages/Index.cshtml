@@ -3,8 +3,8 @@
 @{
     ViewData["Title"] = "Home page";
 }
-@inject SignInManager<IdentityUser> SignInManager 
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager 
+@inject UserManager<ApplicationUser> UserManager
 
     <nav> 
       <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
@@ -58,60 +58,58 @@
    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-   </ol
+   </ol>
    <div class="container-fluid">
       <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-         <div class="carousel-inner row w-100 mx-auto" role="listbox">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
 
-            <!-- Needs to be able to work properly 
-            @{
+
+              @{
                int slideNum = 1;
                string slideNumString = null;
                string srcString = null;
-            }
+              }
 
-            @foreach (var movie in Model.Movies)
-            { 
-               <div class="carousel-item col-md-3 active">
-               
+              @foreach (var movie in Model.Movies)
+            {
+              <div class="carousel-item col-md-3 active">
 
-                  
-                  slideNumString = slideNum.ToString();
-                  srcString = "~/images/" + movie.Title + ".png";
-                  
-                  
-                  <a href = "MovieTemplate?id=@movie.Id">
-                  <img class="img-fluid mx-auto d-block" src="@srcString" alt="slide @slideNumString">
+                  @{slideNumString = slideNum.ToString();
+                  srcString =  @movie.Title + ".png";
+                  }
+
+                  <a href="MovieTemplate?id=@movie.Id">
+                      <img class="img-fluid mx-auto d-block" src="~/images/@srcString" alt="slide @slideNumString">
                   </a>
 
-                  slideNum++;
-                  
-               </div>
+                  @{slideNum++;}
+
+              </div>
             }
-            -->
 
-            <!-- Old implementation
-            <div class="carousel-item col-md-3 active">
-               <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png"alt="slide 1">
-            </div> 
-            <div class="carousel-item col-md-3">
-               <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 2">
-            </div>
-            <div class="carousel-item col-md-3">
-               <img class="img-fluid mx-auto d-block" src="~/images/Assembly EndProcess.png" alt="slide 3">
-            </div>
-            <div class="carousel-item col-md-3">
-               <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png" alt="slide 4">
-            </div>
-            <div class="carousel-item col-md-3">
-               <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 5">
-            </div>
-            <div class="carousel-item col-md-3">
-               <img class="img-fluid mx-auto d-block"  src="~/images/Assembly EndProcess.png" alt="slide 6">
-            </div>
-            -->
 
-         </div>
+              <!-- Old implementation
+    <div class="carousel-item col-md-3 active">
+       <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png"alt="slide 1">
+    </div>
+    <div class="carousel-item col-md-3">
+       <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 2">
+    </div>
+    <div class="carousel-item col-md-3">
+       <img class="img-fluid mx-auto d-block" src="~/images/Assembly EndProcess.png" alt="slide 3">
+    </div>
+    <div class="carousel-item col-md-3">
+       <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png" alt="slide 4">
+    </div>
+    <div class="carousel-item col-md-3">
+       <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 5">
+    </div>
+    <div class="carousel-item col-md-3">
+       <img class="img-fluid mx-auto d-block"  src="~/images/Assembly EndProcess.png" alt="slide 6">
+    </div>
+    -->
+
+          </div>
          <div class="row mx-auto">
             <div class="col-sm-4 ">
                <h2>Top 10 Movies</h2>

@@ -7,15 +7,16 @@ using TRMR.Models;
 
 namespace TRMR.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-      public DbSet<Movie> Movies {get; set;}
+        
+        public DbSet<Movie> Movies {get; set;}
         public DbSet<User> User {get; set;}
-         public DbSet<Review> Review{get; set;}
+        public DbSet<Review> Review{get; set;}
         
     }
 }
