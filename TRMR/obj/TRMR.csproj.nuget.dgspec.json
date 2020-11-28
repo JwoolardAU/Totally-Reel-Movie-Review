@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {}
+    "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {
+    "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+        "projectUniqueName": "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
         "projectName": "TRMR",
-        "projectPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
-        "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
+        "projectPath": "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+        "packagesPath": "C:\\Users\\paul\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -50,19 +55,25 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0-rc.1.20451.17, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.0-rc.1.20451.17, )"
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.0-rc.1.20451.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0-rc.1.20451.13, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
