@@ -25,6 +25,8 @@ namespace TRMR.Areas.Identity.Pages.Account.Manage
 
         public string Username { get; set; }
 
+        public string ReelName {get; set;}// So you can view your 'actual' username
+
         [TempData]
         public string StatusMessage { get; set; }
 
@@ -42,8 +44,13 @@ namespace TRMR.Areas.Identity.Pages.Account.Manage
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var reelName = user.ReelName;
 
             Username = userName;
+
+            ReelName = reelName;
+
+
 
             Input = new InputModel
             {

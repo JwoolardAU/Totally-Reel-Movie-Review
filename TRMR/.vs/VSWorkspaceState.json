@@ -4,8 +4,10 @@
     "\\Areas",
     "\\Areas\\Identity",
     "\\Areas\\Identity\\Pages",
+    "\\Data",
+    "\\Data\\Migrations",
     "\\Models"
   ],
-  "SelectedNode": "\\Areas",
+  "SelectedNode": "\\Data\\Migrations\\20201127180417_ExtendedIdentityUser.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

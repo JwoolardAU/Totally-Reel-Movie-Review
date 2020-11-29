@@ -4,13 +4,36 @@
     ViewData["Title"] = "Register";
 }
 
+@inject SignInManager<ApplicationUser> SignInManager 
+@inject UserManager<ApplicationUser> UserManager
+
+<nav> 
+<a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
+<a href="~/MovieList">Movie List</a>
+<a href="~/About" >About</a>
+<a href="~/Login" class="active">Login/Register</a>
+@if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
+    <a href="~/Login">Currently Logged in as: @User.Identity.Name</a>
+}
+else{
+    <a href="~/Login">Not Currently Logged In</a>
+}
+<button class="right">Search!</button>
+<input type="text" class="right" placeholder="Search a movie..">
+</nav>
+
+<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
+<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
+<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
+<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
+
 <h1>@ViewData["Title"]</h1>
 
 <div class="row">
     <div class="col-md-4">
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
+            <h4>Create a New TRMR Account!</h4>
+            <hr/>
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
@@ -27,10 +50,14 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="Input.ReelName">Username</label>
+                <input asp-for="Input.ReelName" class="form-control"/>
+            </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    @* <div class="col-md-6 col-md-offset-2">
         <section>
             <h4>Use another service to register.</h4>
             <hr />
@@ -59,9 +86,9 @@
                 }
             }
         </section>
-    </div>
+    </div> *@
 </div>
 
-@section Scripts {
+@* @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-}
+} *@

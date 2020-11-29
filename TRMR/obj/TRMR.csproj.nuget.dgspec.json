@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {}
+    "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\New\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {
+    "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\New\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\New\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
         "projectName": "TRMR",
-        "projectPath": "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
-        "packagesPath": "C:\\Users\\paul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paul\\tmp\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
+        "projectPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\New\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\New\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\paul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
