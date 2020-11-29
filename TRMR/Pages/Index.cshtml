@@ -6,12 +6,12 @@
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager
 
-    <nav> 
+   <nav> <!-- This will be added to the layout page later -->
       <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
       <a href="~/MovieList">Movie List</a>
       <a href="~/About" >About</a>
       <a href="~/Login" class="active">Login/Register</a>
-      @if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
+      @if (SignInManager.IsSignedIn(User)){ 
          <a href="~/Login">Currently Logged in as: @User.Identity.Name </a> 
       }
       else{
@@ -19,7 +19,7 @@
       }
       <button class="right">Search!</button>
       <input type="text" class="right" placeholder="Search a movie..">
-    </nav>
+   </nav>
 
 <div id="Welcome">
 <main role="main" class="pb-3">

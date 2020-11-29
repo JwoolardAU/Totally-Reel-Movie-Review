@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj": {}
+    "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj": {
+    "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj",
+        "projectUniqueName": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
         "projectName": "TRMR",
-        "projectPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj",
+        "projectPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
         "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\trmr\\obj\\",
+        "outputPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",

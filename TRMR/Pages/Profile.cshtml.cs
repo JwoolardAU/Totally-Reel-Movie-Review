@@ -21,7 +21,7 @@ namespace TRMR.Pages
             _dbContext = dbContext;
         }
 
-        public User CurrentUser{get; set;} 
+        public User CurrentUser{get; set;} //Needs to be changed from hardcoded "User" to "ApplicationUser"
 
         public IActionResult OnGet(string userName) //ARGUMENT NAME HAS TO MATCH QUERY STRING METADATA NAME (I.E. "userName = blah")
         {

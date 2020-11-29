@@ -11,7 +11,6 @@ namespace TRMR.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        //[Required] // may need to be added with a new migration&update
         public string ReelName {get; set;}  
     }
 }
