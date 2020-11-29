@@ -12,7 +12,7 @@
       <a href="~/About" >About</a>
       <a href="~/Login" class="active">Login/Register</a>
       @if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
-         <a href="~/Login">Currently Logged in as: @User.Identity.Name</a>
+         <a href="~/Login">Currently Logged in as: @User.Identity.Name </a> 
       }
       else{
          <a href="~/Login">Not Currently Logged In</a>

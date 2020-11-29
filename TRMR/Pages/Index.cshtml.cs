@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using TRMR.Models;
 using TRMR.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace TRMR.Pages
 {
@@ -15,17 +16,24 @@ namespace TRMR.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly ApplicationDbContext _dbContext;
-        public IndexModel(ILogger<IndexModel> logger, ApplicationDbContext dbContext)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+
+        public IndexModel(ILogger<IndexModel> logger, ApplicationDbContext dbContext, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _logger = logger;
             _dbContext = dbContext;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
-        public List<Movie> Movies = new List<Movie>();
+        public List<Movie> Movies = new List<Movie>(); 
+        
 
-        public void OnGet()
+        public async void OnGet()
         {
             this.Movies.AddRange(_dbContext.Movies);
         }
     }
 }
+
