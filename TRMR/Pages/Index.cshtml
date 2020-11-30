@@ -3,160 +3,151 @@
 @{
     ViewData["Title"] = "Home page";
 }
-@inject SignInManager<ApplicationUser> SignInManager 
-@inject UserManager<ApplicationUser> UserManager
 
-   <nav> <!-- This will be added to the layout page later -->
-      <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
-      <a href="~/MovieList">Movie List</a>
-      <a href="~/About" >About</a>
-      <a href="~/Login" class="active">Login/Register</a>
-      @if (SignInManager.IsSignedIn(User)){ 
-         <a href="~/Login">Currently Logged in as: @User.Identity.Name </a> 
-      }
-      else{
-         <a href="~/Login">Not Currently Logged In</a>
-      }
-      <button class="right">Search!</button>
-      <input type="text" class="right" placeholder="Search a movie..">
-   </nav>
+
+<nav class="nav2"> 
+
+   <ul class="list-unstyled components">
+      <li><a href="/MovieList#Suspense">Suspense </a></li>
+      <li><a href="/MovieList#RomCom">RomCom</a></li>
+      <li><a href="/MovieList#Horror">Horror</a></li>
+      <li><a href="/MovieList#Action">Action</a></li>
+      <li><a href="/MovieList#SciFi">SciFi</a></li>
+      <li><a href="/MovieList#Drama"> Drama </a></li>
+      <li><a href="/MovieList#Romance"> Romance </a></li>
+      <li><a href="/MovieList#Thriller"> Thriller </a></li>
+      <li><a href="/MovieList#Documentary"> Documentary </a></li>
+      <li><a href="/MovieList#Adventure">Adventure</a></li>
+      <li><a href="/MovieList#Musical"> Musical</a></li>
+      <li><a href="/MovieList#Mystery"> Mystery </a></li>
+      <li><a href="/MovieList#Comedy">Comedy</a></li>
+      <li><a href="/MovieList#Sport"> Sport</a></li>
+      <li><a href="/MovieList#ShortFilm"> Short Film </a></li>
+   </ul>
+
+</nav>
+
 
 <div id="Welcome">
-<main role="main" class="pb-3">
-   <div class="row content">
-   <div class="col-sm-2 sidenav">
-      <div id="sidebar">
-         <div class="sidebar-header">
-            <h3>Movie Genres</h3>
-         </div>
-         <ul class="list-unstyled components">
-            <li><a href="~/MovieList#Suspense">Suspense </a></li>
-            <li><a href="~/MovieList#RomComs">RomCom</a></li>
-            <li><a href="~/MovieList#Horror">Horror</a></li>
-            <li><a href="~/MovieList#Action">Action</a></li>
-            <li><a href="~/MovieList#SciFi">SciFi</a></li>
-            <li><a href="~/MovieList#Drama"> Drama </a></li>
-            <li><a href="~/MovieList#Romance"> Romance </a></li>
-            <li><a href="~/MovieList#Thriller"> Thriller </a></li>
-            <li><a href="~/MovieList#Documentary"> Documentary </a></li>
-            <li><a href="~/MovieList#Adventure">Adventure</a></li>
-            <li><a href="~/MovieList#Musical"> Musical</a></li>
-            <li><a href="~/MovieList#Mystery"> Mystery </a></li>
-            <li><a href="~/MovieList#Comedy">Comedy</a></li>
-            <li><a href="~/MovieList#Sport"> Sport</a></li>
-            <li><a href="~/MovieList#Short"> Short </a></li>
-         </ul>
-      </div>
-   </div>
-   <div class="col-sm-9">
-   <div class="row mx-auto">
-   <div class="col-xs-12 center-block text-center">
-   <h1>Welcome</h1>
-   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
-   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<main role="main">
+
+    <div class="row" >
+      <div class="col ">
+                <div class="col title">
+              <h1 >TOTALLY REEL </h1> 
+               <h2>MOVIE REVIEW</h2> 
+    </div>
+         <div class="row" >
+            <div class="col">
+             
+ @* <img src="~/images/bg1.jpg" alt="..." > 
+ *@
+
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
    <ol class="carousel-indicators">
    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-   </ol>
-   <div class="container-fluid">
-      <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+   </ol
+   <div  class="container-fluid" >
+      <div  id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+         <div class="carousel-inner row w-100 mx-auto" role="listbox" >
 
-
-              @{
+       
+          @{
                int slideNum = 1;
                string slideNumString = null;
-               string srcString = null;
-              }
+               string srcString = null;}
 
-              @foreach (var movie in Model.Movies)
-            {
-              <div class="carousel-item col-md-3 active">
-
-                  @{slideNumString = slideNum.ToString();
+         
+            @foreach (var movie in Model.Movies)
+            { 
+                  {slideNumString = slideNum.ToString();
                   srcString =  @movie.Title + ".png";
                   }
 
-                  <a href="MovieTemplate?id=@movie.Id">
-                      <img class="img-fluid mx-auto d-block" src="~/images/@srcString" alt="slide @slideNumString">
-                  </a>
+                <div  class="carousel-item active flip-card" >             @*style="background-image: url('../images/bg1.jpg');  opacity: 0.7;"> *@
+                  <a href = "MovieTemplate?id=@movie.Id">
+                   <div class="flip-card-inner"  >
+                     <div class="flip-card-front " >
+                           <img style="margin:0" class="img-fluid mx-auto d-block" src="~/images/@srcString" alt="slide @slideNumString"> 
+                     </div>
+                     <div class="flip-card-back"   style="margin:0 text-align: center;">
+                       <h3>@movie.Title</h3>
+                       <b>Age Rating:</b> @movie.Age_Rating &nbsp; &nbsp; &nbsp;
+                       <b>Genre:</b> @movie.Genre
+                       <br><br>
+                       <p>@movie.Details</p>
+                     </div>
+                  </div>
+                   </a>
+               </div>
+                   {slideNum++;}
+            } 
+ </div>
 
-                  @{slideNum++;}
 
-              </div>
-            }
+         <div class="row lists">
 
 
-              <!-- Old implementation
-    <div class="carousel-item col-md-3 active">
-       <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png"alt="slide 1">
-    </div>
-    <div class="carousel-item col-md-3">
-       <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 2">
-    </div>
-    <div class="carousel-item col-md-3">
-       <img class="img-fluid mx-auto d-block" src="~/images/Assembly EndProcess.png" alt="slide 3">
-    </div>
-    <div class="carousel-item col-md-3">
-       <img class="img-fluid mx-auto d-block" src="~/images/The Matrix.png" alt="slide 4">
-    </div>
-    <div class="carousel-item col-md-3">
-       <img class="img-fluid mx-auto d-block" src="~/images/Lord of the Things.png"  alt="slide 5">
-    </div>
-    <div class="carousel-item col-md-3">
-       <img class="img-fluid mx-auto d-block"  src="~/images/Assembly EndProcess.png" alt="slide 6">
-    </div>
-    -->
+                     <div class="col rank1" >
 
-          </div>
-         <div class="row mx-auto">
-            <div class="col-sm-4 ">
-               <h2>Top 10 Movies</h2>
-               <ul>
-                  <li>MOVIE ONE</li>
-                  <li>MOVIE TWO</li>
-                  <li>MOVIE THREE</li>
-                  <li>MOVIE FOUR</li>
-                  <li>MOVIE FIVE</li>
-                  <li>MOVIE SIX</li>
-                  <li>MOVIE SEVEN</li>
-                  <li>MOVIE EIGHT</li>
-                  <li>MOVIE NINE</li>
-                  <li>MOVIE TEN</li>
-               </ul>
-            </div>
-            <div class="col-sm-4 ">
-               <h2>Featured Films</h2>
-               <ul>
-                  <li>MOVIE</li>
-                  <li>MOVIE</li>
-                  <li>MOVIE </li>
-                  <li>MOVIE </li>
-                  <li>MOVIE</li>
-                  <li>MOVIE </li>
-                  <li>MOVIE </li>
-                  <li>MOVIE </li>
-                  <li>MOVIE </li>
-                  <li>MOVIE </li>
-               </ul>
-            </div>
-            <div class="col-sm-4">
-               <h2>Fan Favorites</h2>
-               <ul>
-                  <li>MOVIE ONE</li>
-                  <li>MOVIE TWO</li>
-                  <li>MOVIE THREE</li>
-                  <li>MOVIE FOUR</li>
-                  <li>MOVIE FIVE</li>
-                  <li>MOVIE SIX</li>
-                  <li>MOVIE SEVEN</li>
-                  <li>MOVIE EIGHT</li>
-                  <li>MOVIE NINE</li>
-                  <li>MOVIE TEN</li>
-               </ul>
-            </div>
+
+
+
+
+
+                        <h2>Top 10 Movies</h2>
+                        <ul>
+                           <li>MOVIE ONE</li>
+                           <li>MOVIE TWO</li>
+                           <li>MOVIE THREE</li>
+                           <li>MOVIE FOUR</li>
+                           <li>MOVIE FIVE</li>
+                           <li>MOVIE SIX</li>
+                           <li>MOVIE SEVEN</li>
+                           <li>MOVIE EIGHT</li>
+                           <li>MOVIE NINE</li>
+                           <li>MOVIE TEN</li>
+                        </ul>
+                     </div>
+                     <div class="col rank2" >
+                        <h2>Featured Films</h2>
+                        <ul>
+                           <li>MOVIE</li>
+                           <li>MOVIE</li>
+                           <li>MOVIE </li>
+                           <li>MOVIE </li>
+                           <li>MOVIE</li>
+                           <li>MOVIE </li>
+                           <li>MOVIE </li>
+                           <li>MOVIE </li>
+                           <li>MOVIE </li>
+                           <li>MOVIE </li>
+                        </ul>
+                     </div>
+                     <div class="col rank3" >
+                        <h2>Fan Favorites</h2>
+                        <ul>
+                           <li>MOVIE ONE</li>
+                           <li>MOVIE TWO</li>
+                           <li>MOVIE THREE</li>
+                           <li>MOVIE FOUR</li>
+                           <li>MOVIE FIVE</li>
+                           <li>MOVIE SIX</li>
+                           <li>MOVIE SEVEN</li>
+                           <li>MOVIE EIGHT</li>
+                           <li>MOVIE NINE</li>
+                           <li>MOVIE TEN</li>
+                        </ul>
+                     </div>
+            
          </div>
-      </div>
+
+       </div>
+
    </div>
-</main>
+
+ 
+</main>        
+</div>

@@ -4,23 +4,47 @@
     ViewData["Title"] = "Register";
 }
 
+ @{string reelName = "";}
+
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager
 
-<nav> 
-<a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
-<a href="~/MovieList">Movie List</a>
-<a href="~/About" >About</a>
-<a href="~/Login" class="active">Login/Register</a>
-@if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
-    <a href="~/Login">Currently Logged in as: @User.Identity.Name</a>
-}
-else{
-    <a href="~/Login">Not Currently Logged In</a>
-}
-<button class="right">Search!</button>
-<input type="text" class="right" placeholder="Search a movie..">
+@if (SignInManager.IsSignedIn(User)){ 
+   ApplicationUser appUser = await UserManager.GetUserAsync(User); 
+   reelName = appUser.ReelName; 
+   }
+
+<nav > 
+   <a href="~/Index" > 
+      <div  >   
+         <img class="logopic" src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">
+         <div class="logo">
+         <div class="toplogo" >TOTALLY REEL</div> <br> <div class=" logobottom">MOVIE REVIEW</div> </div>      
+      </div>
+   </a>
+
+   <a href="~/MovieList">Movie List</a>
+   <a href="~/About">About</a>
+
+    @if (SignInManager.IsSignedIn(User)){ 
+         <a href="~/Login">Currently Logged in as: @reelName </a> 
+         <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" role="button">Profile</a>
+          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Logout" role="button">Logout</a>
+      }
+      else{
+         <a href="~/Login">Not Currently Logged In</a>
+          <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Register" role="button">Register</a>
+          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Login" role="button">Login</a>
+      }
+  
+  
+
+ <form class="form-inline my-2 my-lg-0 ml-auto right sh ">
+        <input class="form-control " type="search" placeholder="Search a movie..." aria-label="aearch">
+        <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3  " type="submit">Search</button>
+      </form>
 </nav>
+
 
 <hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
 <hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->

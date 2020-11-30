@@ -1,26 +1,73 @@
-﻿footer {
-	font-size: 10pt;
-	font-style: italic;
+﻿
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.flip-card {
+	background-color: transparent;
+	height : 540px;
+	width : 360px;
+	perspective: 1000px;
+}
+  
+.flip-card-inner {
+	position: relative;
 	width: 100%;
-	position: fixed;
-	font-family: serif;
-	background-color: #d0d0d0;
-	color: #57737a;
-}
-
-h3 {
-	font-size: 23px;
-	width: 160px
-}
-
-h1 {
-	font-size: 70px;
+	height: 100%;
 	text-align: center;
-	margin-top: 0px;
+	transition: transform 0.6s;
+	transform-style: preserve-3d; 
+}
+  
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+ }
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+	height : 540px;
+	width : 360px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden; 
 }
 
-body {
-	margin: 0px 0px 50px 0px;
+.flip-card-back {
+	padding: 10px;
+	background-color: #57737a;
+	color: white;
+	transform: rotateY(180deg);
+}
+
+#Welcome h1 {
+	font-size: 45px;
+	text-align: center;
+	padding: 0px; 
+	line-height: .5;
+	margin-top: 15px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	
+}
+
+#Welcome h2 {
+	font-size: 45px;
+	text-align: center;
+	padding: 0px; 
+	line-height: .7;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+body{
+	margin: 0px 0px 0px 0px;
 	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
@@ -59,12 +106,16 @@ a:hover {
 
 main {
 	color: #193441;
-	background-color: #ffffff;
+	background-color: rgb(230, 229, 229);
 	padding: 15px;
 	z-index: 0;
-	margin-top: 65px;
+	margin-top: 50px;
 }
 
+#Welcome{
+	margin-top: 105px;
+
+}
 
 /*https://stackoverflow.com/questions/5306640/how-to-set-bullet-colors-in-ul-li-html-lists-via-css-without-using-any-images-or*/
 
@@ -93,10 +144,11 @@ li {
 }
 
 .reviewList h3 {
-	background-color: #4e4f4f;
-	color: #f2f2f2;
+  background-color: #4e4f4f;
+  color: #f2f2f2;
   padding: 5px 15px;
   width:100%;
+ 
 }
 
 .reviewList a {
@@ -106,43 +158,65 @@ li {
 .reviewList {
 	overflow: auto;
 	clear: right;
+
 }
 
 #Welcome {
 	text-align: center;
 }
 
-#sidebar {
-	background-color: #bec8cb;
-	height: 100%;
-	padding: 7px 0px;
-	text-align: center;
-	margin-top: 50px;
-	position: fixed;
-	top: 0;
-	z-index: 0;
+.rank1, .rank2, .rank3{
+	background-color: rgba(160, 192, 196, 0.53); 
+	padding-top: 5px;
 }
 
-#sidebar a {
+.rank1 {
+	background-color: rgba(218, 218, 218, 0.51)
+}
+
+.rank2{
+	background-color: rgba(152, 158, 159, 0.304);  
+} 
+
+.rank3{
+	background-color: rgba(152, 158, 159, 0.564);  
+}
+
+.nav2{
+	margin-top:53px;
+	background-color:#93a8ac;
+}
+
+.col-1 {
+	background-color: rgba(120, 108, 108, 0.749);
+	font-size: 15px;
+	padding: 7px 5px; 
+	width:100%;
+	background-clip: content-box;
+	height: 100px;
+}
+
+.col-1 a {
 	float: left;
 	color: #f2f2f2;
-	width: 100%;
+	width: 100px;
 	padding: 12px 0px;
-	font-size: 17px;
+	font-size: 15x;
 }
 
-#sidebar li {
+.col-1 li {
 	padding: 0px;
 	margin: 0px;
-}
+} 
 
 #MovieIndex {
 	padding: 0px;
+	margin:110px;
 }
 
 #MovieIndex h3 {
 	border-bottom: 1px dotted #7d7d7d;
-	margin-top: 30px;
+	margin-top: 80px;
 }
 
 #MovieIndex h2 {
@@ -154,87 +228,149 @@ li {
 #MovieList main,
 #Welcome main {
 	padding: 0px;
+	
 }
 
 .right {
 	float: right;
-	margin-top: 5px;
+	margin: 5px;
 	margin-right: 10px;
 	position: relative;
 }
 
 .left {
 	float: left;
-	margin-top: 5px;
+	margin: 5px;
 	margin-left: 10px;
 	position: relative;
 }
 
-.carousel {
-	width: 1000px;
-	height: 400px;
+.title {
+	margin-top:0px;
+	padding:10px;
+	background-color: lightgrey;
+	background-color: rgba(101, 101, 101, 0.141);
+	background-color: rgb(236, 242, 245);
+	color:white;
+	color: #193441;
+	text-align: center;
 }
 
+.col-11{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	background-color: lightgrey;
 
+}
 
-/* https://medium.com/wdstack/bootstrap-4-custom-carousel-94a537364fde */
+.carousel-inner > .carousel-item >img{
+	margin: 0px;
+	padding: 0px;  
+}
 
-@media (min-width: 768px) {
-	/* show 3 items */
-	.carousel-inner .active,
-	.carousel-inner .active+.carousel-item,
-	.carousel-inner .active+.carousel-item+.carousel-item,
-	.carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
-		display: block;
-	}
-	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
-	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item,
-	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
-		transition: none;
-	}
-	.carousel-inner .carousel-item-next,
-	.carousel-inner .carousel-item-prev {
-		position: relative;
-		transform: translate3d(0, 0, 0);
-	}
-	.carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-		position: absolute;
-		top: 0;
-		right: -25%;
-		z-index: -1;
-		display: block;
-		visibility: visible;
-	}
-	/* left or forward direction */
-	.active.carousel-item-left+.carousel-item-next.carousel-item-left,
-	.carousel-item-next.carousel-item-left+.carousel-item,
-	.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
-	.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item,
-	.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-		position: relative;
-		transform: translate3d(-100%, 0, 0);
-		visibility: visible;
-	}
-	/* farthest right hidden item must be abso position for animations */
-	.carousel-inner .carousel-item-prev.carousel-item-right {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		display: block;
-		visibility: visible;
-	}
-	/* right or prev direction */
-	.active.carousel-item-right+.carousel-item-prev.carousel-item-right,
-	.carousel-item-prev.carousel-item-right+.carousel-item,
-	.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
-	.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item,
-	.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
-		position: relative;
-		transform: translate3d(100%, 0, 0);
-		visibility: visible;
-		display: block;
-		visibility: visible;
-	}
+.mainpic{
+	margin-top:0px;
+	padding:100px;
+	background-color: rgb(10, 7, 7);
+	color:white;
+}
+
+.carousel-item {
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+	background-color: #090909;
+	height : 540px;
+	width: 360px;	
+}
+
+.row, body{
+	background-color:rgb(230, 229, 229);
+}
+
+img {
+	opacity: 0.7;
+  }
+
+.lists{
+	height:100%;
+}
+
+.h2{
+	font-family: Verdana;
+}
+
+#MovieDetails{
+	margin-top:105px;
+}
+
+#MovieDetails img{
+	padding-top: 15px;
+	opacity: 1;
+
+}
+
+footer {
+	font-size: 10pt;
+	font-style: italic;
+	width: 100%;
+	position: fixed;
+	font-family: serif;
+	background-color: #7b7676;
+	color: #dae3e4;
+}
+
+.logo{
+	float:right;
+	color:black;
+}
+
+.logobottom {
+	font-size: 14px;
+	line-height: 0;
+	letter-spacing: .5px;
+	float:right;
+}
+
+.toplogo{
+	letter-spacing: 1.2px;
+	font-size: 14px;
+	float:right;
+}
+
+#mainnav a:first-child{
+	margin:0px;
+	padding:0px;
+	padding-top: 10px;
+	padding-left:5px;
+}
+
+.logopic{
+	float:left;
+	margin-left: 5px;
+}
+
+.sh{
+	padding-top: 5px;
+}
+
+.sh2{
+	margin-top: 5px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  /* background-color: #f4f4f4; */
 }

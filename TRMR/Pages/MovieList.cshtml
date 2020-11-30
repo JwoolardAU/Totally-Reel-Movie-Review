@@ -3,32 +3,9 @@
 @{
    ViewData["Title"] = "MovieList";
 }
-@inject SignInManager<ApplicationUser> SignInManager 
-@inject UserManager<ApplicationUser> UserManager
 
-   <nav> 
-   <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
-   <a href="~/MovieList">Movie List</a>
-   <a href="~/About" >About</a>
-   <a href="~/Login" class="active">Login/Register</a>
-   @if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
-      <a href="~/Login">Currently Logged in as: @User.Identity.Name</a>
-   }
-   else{
-      <a href="~/Login">Not Currently Logged In</a>
-   }
-   <button class="right">Search!</button>
-   <input type="text" class="right" placeholder="Search a movie..">
-   </nav>
+<nav class="nav2"> 
 
-<div id="MovieList">
-   <main role="main" class="pb-3">
-      <div class="row content">
-         <div class="col-sm-2 sidenav">
-            <div id="sidebar">
-               <div class="sidebar-header">
-                  <h3>Movie Genres</h3>
-               </div>
                <ul class="list-unstyled components">
                   <li><a href="#Suspense">Suspense </a></li>
                   <li><a href="#RomCom">RomCom</a></li>
@@ -46,9 +23,13 @@
                   <li><a href="#Sport"> Sport</a></li>
                   <li><a href="#ShortFilm"> Short Film </a></li>
                </ul>
-            </div>
-         </div>
-         <div class="col-sm-9">
+
+</nav>
+
+<div id="MovieList">
+   <main role="main" class="pb-3">
+      <div class="row content">
+         <div class="col">
             <div id="MovieIndex">
                <h2>List of Movie Genres</h2>
                <div id="Suspense">

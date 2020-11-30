@@ -4,12 +4,53 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TRMR</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/main.css" />
     
 </head>
 <body>
- 
+ @{string reelName = "";}
+
+@inject SignInManager<ApplicationUser> SignInManager 
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User)){ 
+   ApplicationUser appUser = await UserManager.GetUserAsync(User); 
+   reelName = appUser.ReelName; 
+   }
+
+
+<nav > 
+   <a href="~/Index" > 
+      <div  >   
+         <img class="logopic" src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">
+         <div class="logo">
+         <div class="toplogo" >TOTALLY REEL</div> <br> <div class=" logobottom">MOVIE REVIEW</div> </div>      
+      </div>
+   </a>
+
+   <a href="~/MovieList">Movie List</a>
+   <a href="~/About">About</a>
+
+    @if (SignInManager.IsSignedIn(User)){ 
+         <a href="~/Login">Currently Logged in as: @reelName </a> 
+         <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" role="button">Profile</a>
+          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Logout" role="button">Logout</a>
+      }
+      else{
+         <a href="~/Login">Not Currently Logged In</a>
+          <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Register" role="button">Register</a>
+          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Login" role="button">Login</a>
+      }
+  
+  
+
+ <form class="form-inline my-2 my-lg-0 ml-auto right sh ">
+        <input class="form-control " type="search" placeholder="Search a movie..." aria-label="aearch">
+        <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3  " type="submit">Search</button>
+      </form>
+</nav>
+
 
 
 <div  id="wrapper">
@@ -22,10 +63,10 @@
 <div class="left">Copyright &copy; 2020, Totally Reel Movie Review </div>
 <div class="right"><b>Please Contact Our </b> <a href="mailto:Jwoolard@augusta.edu">Admin Email</a> <b>For Any TRMR Questions </b> <br></div>
 </footer>
-
+@* 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" ></script>
+    <script src="~/js/site.js" ></script> *@
 
 
     @await RenderSectionAsync("Scripts", required: false)

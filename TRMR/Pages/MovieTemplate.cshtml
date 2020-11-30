@@ -2,53 +2,45 @@
 @model TRMR.Pages.MovieTemplateModel
 @{
    ViewData["Title"] = Model.CurrentMovie.Title;
+   string reelName = "";
 }
+
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager
 
-   <nav> 
-   <a href="~/Index"> <img src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">TOTALLY REEL MOVIE REVIEW </a>
-   <a href="~/MovieList">Movie List</a>
-   <a href="~/About" >About</a>
-   <a href="~/Login" class="active">Login/Register</a>
-   @if (SignInManager.IsSignedIn(User)){ //This needs to be on every page (try adding to layout page)
-      <a href="~/Login">Currently Logged in as: @User.Identity.Name</a>
+@if (SignInManager.IsSignedIn(User)){ 
+   ApplicationUser appUser = await UserManager.GetUserAsync(User); 
+   reelName = appUser.ReelName; 
    }
-   else{
-      <a href="~/Login">Not Currently Logged In</a>
-   }
-   <button class="right">Search!</button>
-   <input type="text" class="right" placeholder="Search a movie..">
-   </nav>
+
+
+<nav class="nav2"> 
+
+   <ul class="list-unstyled components">
+      <li><a href="/MovieList#Suspense">Suspense </a></li>
+      <li><a href="/MovieList#RomCom">RomCom</a></li>
+      <li><a href="/MovieList#Horror">Horror</a></li>
+      <li><a href="/MovieList#Action">Action</a></li>
+      <li><a href="/MovieList#SciFi">SciFi</a></li>
+      <li><a href="/MovieList#Drama"> Drama </a></li>
+      <li><a href="/MovieList#Romance"> Romance </a></li>
+      <li><a href="/MovieList#Thriller"> Thriller </a></li>
+      <li><a href="/MovieList#Documentary"> Documentary </a></li>
+      <li><a href="/MovieList#Adventure">Adventure</a></li>
+      <li><a href="/MovieList#Musical"> Musical</a></li>
+      <li><a href="/MovieList#Mystery"> Mystery </a></li>
+      <li><a href="/MovieList#Comedy">Comedy</a></li>
+      <li><a href="/MovieList#Sport"> Sport</a></li>
+      <li><a href="/MovieList#ShortFilm"> Short Film </a></li>
+   </ul>
+</nav>
+
+
 
 <div id="MovieDetails">
    <main role="main" class="pb-3">
       <div class="row content">
-         <div class="col-sm-2 sidenav">
-            <div id="sidebar">
-               <div class="sidebar-header">
-                  <h3>Movie Genres</h3>
-               </div>
-               <ul class="list-unstyled components">
-                  <li><a href="~/MovieList#Suspense">Suspense </a></li>
-                  <li><a href="~/MovieList#RomComs">RomCom</a></li>
-                  <li><a href="~/MovieList#Horror">Horror</a></li>
-                  <li><a href="~/MovieList#Action">Action</a></li>
-                  <li><a href="~/MovieList#SciFi">SciFi</a></li>
-                  <li><a href="~/MovieList#Drama"> Drama </a></li>
-                  <li><a href="~/MovieList#Romance"> Romance </a></li>
-                  <li><a href="~/MovieList#Thriller"> Thriller </a></li>
-                  <li><a href="~/MovieList#Documentary"> Documentary </a></li>
-                  <li><a href="~/MovieList#Adventure">Adventure</a></li>
-                  <li><a href="~/MovieList#Musical"> Musical</a></li>
-                  <li><a href="~/MovieList#Mystery"> Mystery </a></li>
-                  <li><a href="~/MovieList#Comedy">Comedy</a></li>
-                  <li><a href="~/MovieList#Sport"> Sport</a></li>
-                  <li><a href="~/MovieList#Short"> Short Film</a></li>
-               </ul>
-            </div>
-         </div>
-         <div class="col-sm-9">
+         <div class="col">
             @{string link = @Model.CurrentMovie.Title + ".png";}
             <img id="Movie_Poster_Pic" src="~/images/@link" alt="Movie Poster Pic" width="266" height="400" style="float:right;">
             <h2>@Model.CurrentMovie.Title</h2>
@@ -75,30 +67,59 @@
                @if(Model.Reviews.Count() == 0){
                <p>Don't be shy... be the first to write a reel review!</p>
                }
-               <ul>
-                  @foreach (var rev  in Model.Reviews)
+               
+<ul class="list-unstyled">
+
+
+ @foreach (var rev in Model.Reviews)
                   {
-                  <li>
-                     <p>
-                     <h3>User <a href="Profile?userName=@rev.User_Name">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i></h3>
-                     <strong><em><u>@rev.User_Name's Reel Review:</u></em></strong> @rev.Description
-                     </p>  
-                  </li>
-                  }
+                     
+  <li class="media">
+    
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">User <a href="Profile?userName=@rev.User_Name">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i> </h5>
+      <div class="col-sm-10" style="background-color: white;">
+          <p style="margin-left:15px;">
+           @rev.Description
+       </p>  
+
+      </div>
+      
+    </div>
+ 
+
+  </li>}
                </ul>
 
                <h3 style="background-color: #3D7070;"> Share Your Reel Review</h3>
-               @if (SignInManager.IsSignedIn(User)) //for testing you can just replace the conditional with "true" to see the page as if you were a signed in user 
+               @if (SignInManager.IsSignedIn(User) ) //for testing you can just replace the conditional with "true" to see the page as if you were a signed in user 
                {
-                  <p> Leave a Reel Review Score!</p>
-                  <form method="post">
-                     <input asp-for="TheReview.Description" type="text">   
-                     <input asp-for="TheReview.Rating" type="number" step="1" min="0" max="10" style="position: relative; top: -50px;">
-                     <input asp-for="TheReview.User_Name" type="hidden" value="@User.Identity.Name">
+                    
+                   <form method="post" id="review">
+                      <input asp-for="TheReview.User_Name" type="hidden" value="@reelName">
                      <input asp-for="TheReview.Movie_Id" type="hidden" value="@Model.CurrentMovie.Id">
-                     <input type="submit" value="Submit Review" style="position: relative; top: -50px;"> 
-                  </form>
-                  
+                     <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"> Leave a Reel Review!</label>
+                          <div class="col-sm-6">
+                              <input id="in" asp-for="TheReview.Description" type="text" class="form-control" placeholder="Enter your review...">
+                          </div>
+                        <small class="form-text text-muted">All reviews will be monitored for ...? Please make sure to follow the rules in link</small> 
+                     </div>
+
+                     <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">And a rating</label>
+                        <div class="col-sm-5">
+                           <input id="in2" asp-for="TheReview.Rating" type="number" class="form-control" step="1" min="0" max="10" placeholder="Enter a rating 0-10...">
+                        </div>
+                         <div class="col-sm-5">
+                        <button type="submit" class="btn btn-primary" onClick="removeForm()" >Submit</button>
+                        </div>
+                     </div>
+                    
+
+                     
+               </form>
+
                }
                else
                {
@@ -109,3 +130,13 @@
       </div>
    </main>
 </div>
+
+<script>
+
+function removeForm(){
+   var form =  document.getElementById("review")[0];
+   form.submit();
+   document.getElementById("in")[0].value = '';
+   document.getElementById("in2")[0].value = '';  
+}
+</script>
