@@ -47,9 +47,10 @@ namespace TRMR.Pages
                 return Page();
             }
 
-            
-            // _dbContext.ApplicationUser.Add(CurrentUser);
-            // await _dbContext.SaveChangesAsync();
+            // this.CurrentUser = await _userManager.GetUserAsync(User); //??? Not sure if this is the correct way of identifying current logged in user? 
+
+            // _dbContext.ApplicationUser.Add(CurrentUser);     //I only want to update the specific ApplicationUser properties, not add another user
+            // await _dbContext.SaveChangesAsync();             //Also " 'ApplicationDbContext' does not contain a definition for 'ApplicationUser' "
 
             return Redirect("./SelfProfile");
         }

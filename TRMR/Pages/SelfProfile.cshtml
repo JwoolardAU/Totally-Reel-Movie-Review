@@ -1,13 +1,14 @@
 ﻿@page
 @model TRMR.Pages.SelfProfileModel
-@{
-    ViewData["Title"] = /*Model.CurrentUser.User_Id + "'s " +*/ "Profile";
-}
 
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager
 
- @{ApplicationUser appUser = await UserManager.GetUserAsync(User); }
+@{ApplicationUser appUser = await UserManager.GetUserAsync(User); }
+
+@{
+   ViewData["Title"] = appUser.ReelName + "'s " + "Profile";
+}
 
 <main>
    <strong>
@@ -15,18 +16,21 @@
          <h2> @appUser.ReelName's Profile Page:</h2> 
       </u>
    </strong>
+
+   @* @if(Model.CurrentUser.FavMovie == null)
+   {
+      Model.CurrentUser.FavMovie = Model.CurrentUser.ReelName
+   } *@
+
    <ul>
       <div class="profileList">
-         @* <li><u>@Model.CurrentUser.User_Id's TRMR Join Date:</u> @Model.CurrentUser.Created </li>
-         <li><u>@Model.CurrentUser.User_Id's TRMR Status:</u> @Model.CurrentUser.Status </li>
-         <li><u>@Model.CurrentUser.User_Id's Genre Preferences:</u> @Model.CurrentUser.Tags </li>
-         <li><u>@Model.CurrentUser.User_Id's Bio:</u> @Model.CurrentUser.Bio </li> *@
-         <li><u> Hello Tester</u>  </li>
+         <li><u>@appUser.ReelName's favorite movie(s):</u> @appUser.FavMovie </li>
+         <li><u>@appUser.ReelName's favorite genre(s):</u> @appUser.FavGenre </li>
+         <li><u>@appUser.ReelName's fun fact:</u> @appUser.Bio </li>
       </div>
    </ul>
 
-   <hr>
-   <hr>
+   
    <hr>
 
    <form method="post" id="SelfProfile">
@@ -34,21 +38,21 @@
       <div class="form-group row">
          <label class="col-sm-2 col-form-label"> Let us know what your favorite movie is!</label>
             <div class="col-sm-6">
-               <input id="in" asp-for="CurrentUser.FavMovie" type="text" class="form-control" placeholder="Enter your favorite movie...">
+               <input id="in" asp-for="CurrentUser.FavMovie" type="text" class="form-control" placeholder="Enter your favorite movie(s)...">
             </div>
       </div>
 
       <div class="form-group row">
          <label class="col-sm-2 col-form-label"> Let us know what your favorite movie genres are!</label>
             <div class="col-sm-6">
-               <input id="in2" asp-for="CurrentUser.FavGenre" type="text" class="form-control" placeholder="Enter your favorite genres...">
+               <input id="in2" asp-for="CurrentUser.FavGenre" type="text" class="form-control" placeholder="Enter your favorite genre(s)...">
             </div>
       </div>
 
       <div class="form-group row">
-         <label class="col-sm-2 col-form-label"> Leave a bio so people can know more about you!</label>
+         <label class="col-sm-2 col-form-label"> Leave a fun fact about yourself so people can know more about you!</label>
             <div class="col-sm-6">
-               <input id="in3" asp-for="CurrentUser.Bio" type="text" class="form-control" placeholder="Enter a bio...">
+               <input id="in3" asp-for="CurrentUser.Bio" type="text" class="form-control" placeholder="Enter a fun fact...">
             </div>
       </div>
 

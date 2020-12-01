@@ -15,9 +15,9 @@ namespace TRMR.Models
         public string ReelName {get; set;}  // Acts as the "actual" username
 
         //PROFILE PAGE CONTENT
-        public string FavMovie {get; set;}
-        public string FavGenre {get; set;}
-        public string Bio {get; set;}
+        public string FavMovie {get; set;} = "This TRMR user has not listed any favorite movie(s) as of yet";
+        public string FavGenre {get; set;} = "This TRMR user has not listed any favorite genre(s) as of yet";
+        public string Bio {get; set;} = "This TRMR user has not made any fun facts about themselves yet";
 
     }
 } 

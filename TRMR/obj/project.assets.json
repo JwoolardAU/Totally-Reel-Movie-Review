@@ -8380,19 +8380,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gamer\\.nuget\\packages\\": {}
+    "C:\\Users\\Patrick\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+      "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
       "projectName": "TRMR",
-      "projectPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
-      "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\Current_TRMR\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
+      "projectPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+      "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

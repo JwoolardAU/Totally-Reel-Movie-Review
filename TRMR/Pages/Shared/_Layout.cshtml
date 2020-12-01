@@ -30,12 +30,12 @@
    </a>
 
    <a href="~/MovieList">Movie List</a>
-   <a href="~/About">About</a>
+   <a href="~/About" target="_blank">About</a>
 
     @if (SignInManager.IsSignedIn(User)){ 
          <a href="~/Login">Currently Logged in as: @reelName </a> 
-         <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" role="button">Profile</a>
-          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Logout" role="button">Logout</a>
+         <a class="btn btn-light right"  href="/SelfProfile" title="Manage" role="button">Profile</a>
+         <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Logout" role="button">Logout</a>
       }
       else{
          <a href="~/Login">Not Currently Logged In</a>

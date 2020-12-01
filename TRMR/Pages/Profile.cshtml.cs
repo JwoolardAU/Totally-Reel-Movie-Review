@@ -43,7 +43,6 @@ namespace TRMR.Pages
                 return NotFound();
             }
 
-            //this.CurrentUser = _dbContext.User.Find(userName);
             this.CurrentUser = await _userManager.FindByIdAsync(useriden); 
             
  
