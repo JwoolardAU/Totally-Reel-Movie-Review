@@ -1,0 +1,71 @@
+﻿@page
+@model TRMR.Pages.ProfileModel
+@{
+    ViewData["Title"] = /*Model.CurrentUser.User_Id + "'s " +*/ "Profile";
+}
+
+
+<main>
+   <strong>
+      <u>
+         <h2> @appUser.ReelName's Profile Page:</h2> 
+      </u>
+   </strong>
+   <ul>
+      <div class="profileList">
+         @* <li><u>@Model.CurrentUser.User_Id's TRMR Join Date:</u> @Model.CurrentUser.Created </li>
+         <li><u>@Model.CurrentUser.User_Id's TRMR Status:</u> @Model.CurrentUser.Status </li>
+         <li><u>@Model.CurrentUser.User_Id's Genre Preferences:</u> @Model.CurrentUser.Tags </li>
+         <li><u>@Model.CurrentUser.User_Id's Bio:</u> @Model.CurrentUser.Bio </li> *@
+         <li><u> Hello Tester</u>  </li>
+      </div>
+   </ul>
+
+   <hr>
+   <hr>
+   <hr>
+
+   <form method="post" id="SelfProfile">
+
+      <div class="form-group row">
+         <label class="col-sm-2 col-form-label"> Let us know what your favorite movie is!</label>
+            <div class="col-sm-6">
+               <input id="in" asp-for="CurrentUser.FavMovie" type="text" class="form-control" placeholder="Enter your favorite movie...">
+            </div>
+      </div>
+
+      <div class="form-group row">
+         <label class="col-sm-2 col-form-label"> Let us know what your favorite movie genres are!</label>
+            <div class="col-sm-6">
+               <input id="in2" asp-for="CurrentUser.FavGenre" type="text" class="form-control" placeholder="Enter your favorite genres...">
+            </div>
+      </div>
+
+      <div class="form-group row">
+         <label class="col-sm-2 col-form-label"> Leave a bio so people can know more about you!</label>
+            <div class="col-sm-6">
+               <input id="in3" asp-for="CurrentUser.Bio" type="text" class="form-control" placeholder="Enter a bio...">
+            </div>
+      </div>
+
+      <div class="form-group row">
+         <div class="col-sm-5">
+            <button type="submit" class="btn btn-primary" onClick="removeForm()" >Submit</button>
+         </div>
+      </div>
+                     
+   </form>
+
+
+
+</main>
+
+<script>
+function removeForm(){
+   var form =  document.getElementById("SelfProfile")[0];
+   form.submit();
+   document.getElementById("in")[0].value = '';
+   document.getElementById("in2")[0].value = '';  
+   document.getElementById("in3")[0].value = '';  
+}
+</script>

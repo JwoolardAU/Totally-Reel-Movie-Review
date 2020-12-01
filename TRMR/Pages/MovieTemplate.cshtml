@@ -93,7 +93,7 @@
                @if (SignInManager.IsSignedIn(User) ) //for testing you can just replace the conditional with "true" to see the page as if you were a signed in user 
                {
                     
-                   <form method="post" id="review">
+                  <form method="post" id="review">
                      <input asp-for="TheReview.User_Name" type="hidden" value="@reelName">
                      <input asp-for="TheReview.User_Identification" type="hidden" value="@userId">
                      <input asp-for="TheReview.Movie_Id" type="hidden" value="@Model.CurrentMovie.Id">
@@ -110,14 +110,12 @@
                         <div class="col-sm-5">
                            <input id="in2" asp-for="TheReview.Rating" type="number" class="form-control" step="1" min="0" max="10" placeholder="Enter a rating 0-10...">
                         </div>
-                         <div class="col-sm-5">
-                        <button type="submit" class="btn btn-primary" onClick="removeForm()" >Submit</button>
+                        <div class="col-sm-5">
+                           <button type="submit" class="btn btn-primary" onClick="removeForm()" >Submit</button>
                         </div>
                      </div>
-                    
-
                      
-               </form>
+                  </form>
 
                }
                else
