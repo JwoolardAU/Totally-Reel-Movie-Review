@@ -14,7 +14,7 @@ namespace TRMR.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.0-rc.1.20451.13");
+                .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -269,6 +269,9 @@ namespace TRMR.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("User_Id1")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("User_Identification")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("User_Name")
