@@ -6,23 +6,23 @@
 
 <nav class="nav2"> 
 
-               <ul class="list-unstyled components">
-                  <li><a href="#Suspense">Suspense </a></li>
-                  <li><a href="#RomCom">RomCom</a></li>
-                  <li><a href="#Horror">Horror</a></li>
-                  <li><a href="#Action">Action</a></li>
-                  <li><a href="#SciFi">SciFi</a></li>
-                  <li><a href="#Drama"> Drama </a></li>
-                  <li><a href="#Romance"> Romance </a></li>
-                  <li><a href="#Thriller"> Thriller </a></li>
-                  <li><a href="#Documentary"> Documentary </a></li>
-                  <li><a href="#Adventure">Adventure</a></li>
-                  <li><a href="#Musical"> Musical</a></li>
-                  <li><a href="#Mystery"> Mystery </a></li>
-                  <li><a href="#Comedy">Comedy</a></li>
-                  <li><a href="#Sport"> Sport</a></li>
-                  <li><a href="#ShortFilm"> Short Film </a></li>
-               </ul>
+   <ul class="list-unstyled components">
+      <li><a href="#Suspense">Suspense </a></li>
+      <li><a href="#RomCom">RomCom</a></li>
+      <li><a href="#Horror">Horror</a></li>
+      <li><a href="#Action">Action</a></li>
+      <li><a href="#SciFi">SciFi</a></li>
+      <li><a href="#Drama"> Drama </a></li>
+      <li><a href="#Romance"> Romance </a></li>
+      <li><a href="#Thriller"> Thriller </a></li>
+      <li><a href="#Documentary"> Documentary </a></li>
+      <li><a href="#Adventure">Adventure</a></li>
+      <li><a href="#Musical"> Musical</a></li>
+      <li><a href="#Mystery"> Mystery </a></li>
+      <li><a href="#Comedy">Comedy</a></li>
+      <li><a href="#Sport"> Sport</a></li>
+      <li><a href="#ShortFilm"> Short Film </a></li>
+   </ul>
 
 </nav>
 
@@ -31,172 +31,31 @@
       <div class="row content">
          <div class="col">
             <div id="MovieIndex">
-               <h2>List of Movie Genres</h2>
-               <div id="Suspense">
-                  &nbsp;
-                  <h3 >Suspense</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="RomCom">
-                  &nbsp;
-                  <h3 >RomCom</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Horror">
-                  &nbsp;
-                  <h3>Horror</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Action">
-                  &nbsp;
-                  <h3>Action</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="SciFi">
-                  &nbsp;
-                  <h3>SciFi</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Drama">
-                  &nbsp;
-                  <h3>Drama</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Romance">
-                  &nbsp;
-                  <h3>Romance</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Thriller">
-                  &nbsp;
-                  <h3>Thriller</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Documentary">
-                  &nbsp;
-                  <h3>Documentary</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Adventure">
-                  &nbsp;
-                  <h3>Adventure</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Musical">
-                  &nbsp;
-                  <h3>Musical</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Mystery">
-                  &nbsp;
-                  <h3>Mystery</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Comedy">
-                  &nbsp;
-                  <h3>Comedy</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="Sport">
-                  &nbsp;
-                  <h3>Sport</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
-               <div id="ShortFilm">
-                  &nbsp;
-                  <h3>Short Film</h3>
-                  <ul class="MovieList">
-                     @foreach (var movie in Model.Movies)
-                     {
-                     //string link = @movie.Title; //No longer needed
-                     <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
-                     }
-                  </ul>
-               </div>
+               <h2>List of all TRMR Movies by Genre</h2>
+
+               <hr>
+
+               @foreach (string genre in Model.Genres)
+               {
+                   
+                  <div id="@genre">
+                     <h3>@genre</h3>
+                     <ul class="MovieList">
+                        @{int genreMovCount = 0;}
+                        @foreach (var movie in Model.Movies)
+                        {
+                           @if(movie.Genre == genre){
+                              <li><a href = "MovieTemplate?id=@movie.Id">@movie.Title</a></li>
+                              genreMovCount++;
+                           }
+                        }
+                        @if(genreMovCount == 0){
+                           <li style="color:blue;"><i>TRMR does not currently have any @genre movies up for review</i></li>
+                        }
+                     </ul>
+                  </div>
+               }
+
             </div>
          </div>
       </div>

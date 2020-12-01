@@ -17,7 +17,8 @@ namespace TRMR.Data
         public DbSet<Movie> Movies {get; set;}
         public DbSet<User> User {get; set;}
         public DbSet<Review> Review{get; set;}
-        public DbSet<ApplicationUser> AppUser {get; set;}
+
+        // public DbSet<ApplicationUser> AppUser {get; set;} //Actually not necessary 
         
     }
 }

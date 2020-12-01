@@ -31,10 +31,13 @@ namespace TRMR.Pages
             _dbContext = dbContext;
         }
 
+        [BindProperty]
         public ApplicationUser CurrentUser  {get; set;}
+
 
         public async Task<IActionResult> OnGet() 
         {
+            this.CurrentUser = await _userManager.GetUserAsync(User);
 
             return Page();  
 
@@ -47,10 +50,15 @@ namespace TRMR.Pages
                 return Page();
             }
 
-            // this.CurrentUser = await _userManager.GetUserAsync(User); //??? Not sure if this is the correct way of identifying current logged in user? 
+            var id = _userManager.GetUserId(User); 
+            var dbuser = _dbContext.Users.Find(id);  // dbuser will be one instance of an ApplicationUser
 
-            // _dbContext.ApplicationUser.Add(CurrentUser);     //I only want to update the specific ApplicationUser properties, not add another user
-            // await _dbContext.SaveChangesAsync();             //Also " 'ApplicationDbContext' does not contain a definition for 'ApplicationUser' "
+            dbuser.Bio = CurrentUser.Bio; // and so on
+            dbuser.FavGenre = CurrentUser.FavGenre;
+            dbuser.FavMovie = CurrentUser.FavMovie;
+
+            await _dbContext.SaveChangesAsync();
+
 
             return Redirect("./SelfProfile");
         }

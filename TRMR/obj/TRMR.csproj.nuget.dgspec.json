@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {}
+    "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj": {
+    "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj",
         "projectName": "TRMR",
-        "projectPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+        "projectPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj",
         "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
+        "outputPath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\trmr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

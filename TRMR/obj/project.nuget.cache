@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fkA21OZRYzYMjPlGCgEebmHASOdTe4daZ5itw8jK1BdZwtQpx713KcidbPhNhl2CvaOEe9zOaL974osLUFZ80A==",
+  "dgSpecHash": "x2gylhdYZuTqnr24Yj4uiQNAMN4y8ED8HLExVfTlwZk0Wb8NcQfpldJfi9/pHP26BSuy4ltzVXWnAoZq1O3A7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+  "projectFilePath": "C:\\Users\\Patrick\\Desktop\\Fall_2020\\InternetProj\\Totally-Reel-Movie-Review\\trmr\\TRMR.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patrick\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
