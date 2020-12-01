@@ -18,13 +18,13 @@ using TRMR.Data;
 
 namespace TRMR.Pages
 {
-    public class ProfileModel : PageModel
+    public class SelfProfileModel : PageModel
     {
         private readonly ILogger<ProfileModel> _logger;
         private readonly ApplicationDbContext _dbContext;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public ProfileModel(UserManager<ApplicationUser> userManager, ILogger<ProfileModel> logger, ApplicationDbContext dbContext)
+        public SelfProfileModel(UserManager<ApplicationUser> userManager, ILogger<ProfileModel> logger, ApplicationDbContext dbContext)
         {
             _userManager = userManager;
             _logger = logger;
@@ -48,8 +48,8 @@ namespace TRMR.Pages
             }
 
             
-            _dbContext.ApplicationUser.Add(CurrentUser);
-            await _dbContext.SaveChangesAsync();
+            // _dbContext.ApplicationUser.Add(CurrentUser);
+            // await _dbContext.SaveChangesAsync();
 
             return Redirect("./SelfProfile");
         }

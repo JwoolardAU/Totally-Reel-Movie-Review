@@ -1,9 +1,13 @@
 ﻿@page
-@model TRMR.Pages.ProfileModel
+@model TRMR.Pages.SelfProfileModel
 @{
     ViewData["Title"] = /*Model.CurrentUser.User_Id + "'s " +*/ "Profile";
 }
 
+@inject SignInManager<ApplicationUser> SignInManager 
+@inject UserManager<ApplicationUser> UserManager
+
+ @{ApplicationUser appUser = await UserManager.GetUserAsync(User); }
 
 <main>
    <strong>

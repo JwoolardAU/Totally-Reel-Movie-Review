@@ -1237,3 +1237,4 @@ C:\Users\Patrick\Desktop\Fall_2020\InternetProj\Totally-Reel-Movie-Review\TRMR\o
 C:\Users\Patrick\Desktop\Fall_2020\InternetProj\Totally-Reel-Movie-Review\TRMR\obj\Debug\net5.0\ref\TRMR.dll
 C:\Users\Patrick\Desktop\Fall_2020\InternetProj\Totally-Reel-Movie-Review\TRMR\obj\Debug\net5.0\TRMR.pdb
 C:\Users\Patrick\Desktop\Fall_2020\InternetProj\Totally-Reel-Movie-Review\TRMR\obj\Debug\net5.0\TRMR.genruntimeconfig.cache
+C:\Users\gamer\Desktop\Fall_2020\InternetProg\Current_TRMR\Totally-Reel-Movie-Review\TRMR\obj\Debug\net5.0\Razor\Pages\SelfProfile.cshtml.g.cs
