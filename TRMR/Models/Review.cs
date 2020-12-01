@@ -14,6 +14,8 @@ namespace  TRMR.Models
         
         [ForeignKey("User")]
         public String User_Name{get; set;} // ??? Some reference to the built in AspNetUser table for the current user (the one writing the review)
+
+        public string User_Identification {get; set;} // Used to access specific user profile pages
         
         [ForeignKey("Movie")]
         public int Movie_Id{get; set;} //Get's filled in with @Model.CurrentMovie.Id
