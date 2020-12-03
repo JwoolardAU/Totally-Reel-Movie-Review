@@ -38,6 +38,16 @@
 </nav>
 
 
+@{
+   double avg = 0;
+   double rating = 0;
+   foreach (var rev in Model.Reviews)
+   {
+      Double.TryParse(rev.Rating, out rating);
+      avg += rating;
+   }
+   avg /= Model.Reviews.Count();
+}
 
 <div id="MovieDetails">
    <main role="main" class="pb-3">
@@ -52,6 +62,7 @@
                   <li>Director: @Model.CurrentMovie.Director</li>
                   <li>Starring: @Model.CurrentMovie.Starring</li>
                   <li>Genre: @Model.CurrentMovie.Genre</li>
+                  <li>Average Rating: @avg</li>
                   <li>Age Rating: @Model.CurrentMovie.Age_Rating</li>
                   <ul>
                      @foreach (var actor in Model.CurrentMovie.Cast)
