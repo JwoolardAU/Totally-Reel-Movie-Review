@@ -42,7 +42,7 @@
                               {slideNumString = slideNum.ToString(); 
                               srcString = @movie.Title + ".png"; }
                               <div class="swiper-slide flip-card">
-                                 <a href="MovieTemplate?id=1">
+                                 <a href="MovieTemplate?id=@movie.Id">
                                     <div class="flip-card-inner">
                                        <div class="flip-card-front "> <img src="~/images/@srcString" alt="slide @slideNumString"> </div>
                                        <div class="flip-card-back" style="margin:0 text-align: center;">

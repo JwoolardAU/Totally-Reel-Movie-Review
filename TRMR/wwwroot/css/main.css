@@ -1,11 +1,23 @@
-﻿body, html {
+﻿
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+body, html {
     height: 100%;
     width: 100%;
 }
 
 body {
     margin: 0px 0px 0px 0px;
-	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-family: "Lato", sans-serif;
 	background-color: rgb(230, 229, 229);
 }
 
@@ -144,28 +156,6 @@ li {
     background-color: #93a8ac;
 }
 
-.col-1 {
-    background-color: rgba(120, 108, 108, 0.749);
-    font-size: 15px;
-    padding: 7px 5px;
-    width: 100%;
-    background-clip: content-box;
-    height: 100px;
-}
-
-.col-1 a {
-    float: left;
-    color: #f2f2f2;
-    width: 100px;
-    padding: 12px 0px;
-    font-size: 15x;
-}
-
-.col-1 li {
-    padding: 0px;
-    margin: 0px;
-}
-
 #MovieIndex {
     padding: 0px;
     margin: 110px;
@@ -207,13 +197,6 @@ li {
     background-color: rgb(255, 255, 255);
     color: #070707;
     text-align: center;
-}
-
-.col-11 {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    background-color: lightgrey;
 }
 
 .mainpic {
@@ -305,24 +288,12 @@ footer {
     overflow: hidden;
 }
 
-#About {
-	padding-left: 30px;
-}
-
 #manageProfile{
 	margin-top: 20px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+#About{
+	margin: 40px;
 }
 
 .flip-card {
