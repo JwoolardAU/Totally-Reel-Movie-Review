@@ -34,7 +34,7 @@
 				<li><a href="/MovieList#ShortFilm"> Short Film </a></li>
 			</ul>
 		</nav>
-		@{
+		@{//This code block does the average review calculation for the MovieTemplate page
 			double avg = 0;
 			double rating = 0;
 			int nullcount = 0;
@@ -65,7 +65,7 @@
 							@* <li>Movie Title: @Model.CurrentMovie.Title</li> *@
 							@if (noReviews)
 							{
-								<h4>No Reel Reviews yet! (Leave one below!) </h4>
+								<h4>No Reel Review Ratings yet! (Leave one below!) </h4>
 							}
 							else{
 								<h4>Average Rating: @avg.ToString()</h4>
@@ -109,7 +109,7 @@
                            <div class="form-group row">
                               <label class="col-sm-2 col-form-label"> Leave a Reel Review!</label>
                               <div class="col-sm-6">
-                                 <input id="in" asp-for="TheReview.Description" type="text" class="form-control" placeholder="Enter your review..."> </div> <small class="form-text text-muted">All reviews will be monitored for ...? Please make sure to follow the rules in link</small> </div>
+                                 <input id="in" asp-for="TheReview.Description" type="text" class="form-control" placeholder="Enter your review..."> </div> <small class="form-text text-muted">All reviews will be monitored. Please make sure to follow the rules as listed on the <a href="/About" target="_blank" style="color:red;">about page.</a> </small> </div>
                            <div class="form-group row">
                               <label class="col-sm-2 col-form-label">And a rating</label>
                               <div class="col-sm-5">

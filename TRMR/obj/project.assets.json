@@ -8380,24 +8380,26 @@
     ]
   },
   "packageFolders": {
-    "/home/mark/.nuget/packages/": {}
+    "C:\\Users\\gamer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/MHOLCOMB/repos/blah/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
+      "projectUniqueName": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\FINAL\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
       "projectName": "TRMR",
-      "projectPath": "/mnt/c/Users/MHOLCOMB/repos/blah/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
-      "packagesPath": "/home/mark/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/MHOLCOMB/repos/blah/Totally-Reel-Movie-Review/TRMR/obj/",
+      "projectPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\FINAL\\Totally-Reel-Movie-Review\\TRMR\\TRMR.csproj",
+      "packagesPath": "C:\\Users\\gamer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gamer\\Desktop\\Fall_2020\\InternetProg\\FINAL\\Totally-Reel-Movie-Review\\TRMR\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mark/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\gamer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8469,7 +8471,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

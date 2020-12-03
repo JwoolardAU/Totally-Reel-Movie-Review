@@ -2,7 +2,7 @@
 @page
 @model TRMR.Pages.ProfileModel
 @{
-    ViewData["Title"] = /*Model.CurrentUser.User_Id + "'s " +*/ "Profile";
+    ViewData["Title"] = Model.CurrentUser.ReelName + "'s " + "Profile";
 }
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager

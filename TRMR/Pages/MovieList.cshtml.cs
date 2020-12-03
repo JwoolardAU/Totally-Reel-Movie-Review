@@ -21,8 +21,6 @@ namespace TRMR.Pages
             _dbContext = dbContext;
         }
         public List<Movie> Movies = new List<Movie>();
-        //public List<Movie> GenreMovies = new List<Movie>(); //In the event we go with the query route of diplaying movies
-
 
         public List<string> Genres = new List<string>() {"Suspense", "RomCom", "Horror", "Action", "SciFi","Drama","Romance","Thriller","Documentary",
                                                          "Adventure", "Musical", "Mystery", "Comedy", "Sport", "ShortFilm"};
@@ -30,11 +28,6 @@ namespace TRMR.Pages
         public void OnGet()
         {
             this.Movies.AddRange(_dbContext.Movies);
-
-            /* Implement using queries? Might work on more later*/
-            // var movieByGenre = _dbContext.Movies
-            //         .Where(x => x.Genre == "Drama");            
-            // this.GenreMovies.AddRange(movieByGenre);
 
         }
     }

@@ -26,19 +26,12 @@
          <a href="~/Login">Currently Logged in as: @reelName </a> 
          <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" role="button">Profile</a>
           <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Logout" role="button">Logout</a>
-      }
+        }
       else{
          <a href="~/Login">Not Currently Logged In</a>
           <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Register" role="button">Register</a>
           <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Login" role="button">Login</a>
-      }
-  
-  
-
- <form class="form-inline my-2 my-lg-0 ml-auto right sh ">
-        <input class="form-control " type="search" placeholder="Search a movie..." aria-label="aearch">
-        <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3  " type="submit">Search</button>
-      </form>
+        }
 </nav>
 
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace  TRMR.Models
 {
-    public class User
+    public class User     //IGNORE THIS DATA MODEL FILE. IT WAS USED SOLEY TESTING
     {
         [Key]
         public String User_Id{get; set;}

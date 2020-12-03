@@ -24,7 +24,7 @@
 	</ul>
 </nav>
 
-@{
+@{//This code block does the average review and sorting calculations for the index page
    var highestReviewed = new List<(string, string, int)>();
    var lolXDsoRandom = new List<(string, string, int)>();
    double avg = 0;
@@ -70,6 +70,7 @@
 
    var mostReviewed = new List<(string, string, int)>();
    int reviewCount = 0;
+   int listLength = 0;
    foreach(var movie in Model.Movies)
    {
       foreach (var rev in Model.Reviews)
@@ -79,8 +80,15 @@
             reviewCount++;
          }
       }
-      mostReviewed.Add((movie.Title, reviewCount.ToString(), movie.Id));
+      
+      if(reviewCount != 0){
+         mostReviewed.Add((movie.Title, reviewCount.ToString(), movie.Id));
+         listLength++;
+      }
+
       reviewCount = 0;
+      
+      
    }
    mostReviewed = mostReviewed.OrderByDescending (t => t.Item2).ToList();
 
@@ -128,24 +136,24 @@
 								<h2> <div class="ranking">Top 10 Movies</div> </h2>
 								<ul>
 									@for(int i = 0; i < 10 && i < highestReviewed.Count; i++)
-                           			{
-                            		  <li><a href = "MovieTemplate?id=@highestReviewed[i].Item3"><h3>@highestReviewed[i].Item1 scores a @highestReviewed[i].Item2 out of 10! </h3></a></li>
-                           			}
+                           {
+                              <li><a href = "MovieTemplate?id=@highestReviewed[i].Item3"><h3>@highestReviewed[i].Item1 scores a @highestReviewed[i].Item2 out of 10! </h3></a></li>
+                           }
 								</ul>
 							</div>
 							<div class="col rank">
 								<h2> <div class="ranking">Featured Films</div> </h2>
 								<ul>
-                           			@for(int i = 0; i < 10; i++)
-                           			{
-                              			<li><a href = "MovieTemplate?id=@lolXDsoRandom[i].Item3"><h3>@lolXDsoRandom[i].Item1 </h3></a></li>
-                           			}
+                           @for(int i = 0; i < 10; i++)
+                           {
+                              <li><a href = "MovieTemplate?id=@lolXDsoRandom[i].Item3"><h3>@lolXDsoRandom[i].Item1 </h3></a></li>
+                           }
 								</ul>
 							</div>
 							<div class="col rank">
-								<h2><div class="Hottest Hits">Fan Favorites</div></h2>
+								<h2><div class="Hottest Hits">TRMR's Most Popular</div></h2>
 								<ul>
-									@for(int i = 0; i < 10; i++)
+									@for(int i = 0; i < listLength; i++)
 									{
 										<li><a href = "MovieTemplate?id=@mostReviewed[i].Item3"><h3>@mostReviewed[i].Item1 has @mostReviewed[i].Item2 Reel Reviews!</h3></a></li>
 									}

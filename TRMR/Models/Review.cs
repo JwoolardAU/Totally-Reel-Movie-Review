@@ -10,11 +10,11 @@ namespace  TRMR.Models
     public class Review
     {
         [Key]
-        public int User_Id{get; set;} //Should be changed to ReviewNumber
+        public int User_Id{get; set;} //This should have been called ReviewNumber, but SQLite doesn't support table column alteration
         
         [ForeignKey("User")]
-        public String User_Name{get; set;} // ??? Some reference to the built in AspNetUser table for the current user (the one writing the review)
-
+        public String User_Name{get; set;} 
+        
         public string User_Identification {get; set;} // Used to access specific user profile pages
         
         [ForeignKey("Movie")]
