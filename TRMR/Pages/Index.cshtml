@@ -86,6 +86,67 @@
             }  
  </div>
 
+@{
+   var highestReviewed = new List<(string, string, int)>();
+   var lolXDsoRandom = new List<(string, string, int)>();
+   double avg = 0;
+   double rating = 0;
+   int nullcount = 0;
+   int notSameMovies = 0;
+   bool noReviews = true;
+   foreach(var movie in Model.Movies)
+   {
+      foreach (var rev in Model.Reviews)
+      {
+         if(rev.Movie_Id == movie.Id)
+         {
+            if(rev.Rating != null)
+            {
+               Double.TryParse(rev.Rating, out rating);
+               avg += rating;
+               noReviews = false;
+            }
+            else
+            {
+               nullcount ++;
+            }
+         }
+         else
+            notSameMovies++;
+      }
+      if(Model.Reviews.Count() - nullcount - notSameMovies != 0)
+         avg /= (Model.Reviews.Count() - nullcount - notSameMovies);
+      else
+         avg = 0;
+      nullcount = 0;
+      notSameMovies = 0;
+      if(!noReviews)
+         highestReviewed.Add((movie.Title, Math.Abs(avg).ToString(), movie.Id));
+      lolXDsoRandom.Add((movie.Title, Math.Abs(avg).ToString(), movie.Id));
+      avg = 0;
+      noReviews = true;
+
+   }
+   highestReviewed = highestReviewed.OrderByDescending (t => t.Item2).ToList();
+   lolXDsoRandom = lolXDsoRandom.OrderBy(a => Guid.NewGuid()).ToList();
+
+   var mostReviewed = new List<(string, string, int)>();
+   int reviewCount = 0;
+   foreach(var movie in Model.Movies)
+   {
+      foreach (var rev in Model.Reviews)
+      {
+         if(rev.Movie_Id == movie.Id)
+         {
+            reviewCount++;
+         }
+      }
+      mostReviewed.Add((movie.Title, reviewCount.ToString(), movie.Id));
+      reviewCount = 0;
+   }
+   mostReviewed = mostReviewed.OrderByDescending (t => t.Item2).ToList();
+
+}
 
          <div class="row lists">
 
@@ -99,46 +160,28 @@
 
                         <h2>Top 10 Movies</h2>
                         <ul>
-                           <li>MOVIE ONE</li>
-                           <li>MOVIE TWO</li>
-                           <li>MOVIE THREE</li>
-                           <li>MOVIE FOUR</li>
-                           <li>MOVIE FIVE</li>
-                           <li>MOVIE SIX</li>
-                           <li>MOVIE SEVEN</li>
-                           <li>MOVIE EIGHT</li>
-                           <li>MOVIE NINE</li>
-                           <li>MOVIE TEN</li>
+                           @for(int i = 0; i < 10 && i < highestReviewed.Count; i++)
+                           {
+                              <li><a href = "MovieTemplate?id=@highestReviewed[i].Item3"><h3>@highestReviewed[i].Item1 scores a @highestReviewed[i].Item2 out of 10! </h3></a></li>
+                           }
                         </ul>
                      </div>
                      <div class="col rank2" >
                         <h2>Featured Films</h2>
                         <ul>
-                           <li>MOVIE</li>
-                           <li>MOVIE</li>
-                           <li>MOVIE </li>
-                           <li>MOVIE </li>
-                           <li>MOVIE</li>
-                           <li>MOVIE </li>
-                           <li>MOVIE </li>
-                           <li>MOVIE </li>
-                           <li>MOVIE </li>
-                           <li>MOVIE </li>
+                           @for(int i = 0; i < 10; i++)
+                           {
+                              <li><a href = "MovieTemplate?id=@lolXDsoRandom[i].Item3"><h3>@lolXDsoRandom[i].Item1 </h3></a></li>
+                           }
                         </ul>
                      </div>
                      <div class="col rank3" >
-                        <h2>Fan Favorites</h2>
+                        <h2>Hottest Hits</h2>
                         <ul>
-                           <li>MOVIE ONE</li>
-                           <li>MOVIE TWO</li>
-                           <li>MOVIE THREE</li>
-                           <li>MOVIE FOUR</li>
-                           <li>MOVIE FIVE</li>
-                           <li>MOVIE SIX</li>
-                           <li>MOVIE SEVEN</li>
-                           <li>MOVIE EIGHT</li>
-                           <li>MOVIE NINE</li>
-                           <li>MOVIE TEN</li>
+                           @for(int i = 0; i < 10; i++)
+                           {
+                              <li><a href = "MovieTemplate?id=@mostReviewed[i].Item3"><h3>@mostReviewed[i].Item1 has @mostReviewed[i].Item2 Reel Reviews!</h3></a></li>
+                           }
                         </ul>
                      </div>
             

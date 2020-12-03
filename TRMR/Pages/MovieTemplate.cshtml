@@ -41,12 +41,23 @@
 @{
    double avg = 0;
    double rating = 0;
+   int nullcount = 0;
+   bool noReviews = true;
    foreach (var rev in Model.Reviews)
    {
-      Double.TryParse(rev.Rating, out rating);
-      avg += rating;
+      if(rev.Rating != null)
+      {
+         Double.TryParse(rev.Rating, out rating);
+         avg += rating;
+         noReviews = false;
+      }
+      else
+      {
+         nullcount ++;
+      }
    }
-   avg /= Model.Reviews.Count();
+   avg /= (Model.Reviews.Count() - nullcount);
+   
 }
 
 <div id="MovieDetails">
@@ -58,11 +69,17 @@
             <h2>@Model.CurrentMovie.Title</h2>
             <div class="MovieFactList">
                <ul>
-                  <li>Movie Title: @Model.CurrentMovie.Title</li>
+                  @* <li>Movie Title: @Model.CurrentMovie.Title</li> *@
+                  @if (noReviews)
+                  {
+                     <h4>No Reel Reviews yet! (Leave one below!) </h4>
+                  }
+                  else{
+                     <h4>Average Rating: @avg.ToString()</h4>
+                  }
                   <li>Director: @Model.CurrentMovie.Director</li>
                   <li>Starring: @Model.CurrentMovie.Starring</li>
                   <li>Genre: @Model.CurrentMovie.Genre</li>
-                  <li>Average Rating: @avg</li>
                   <li>Age Rating: @Model.CurrentMovie.Age_Rating</li>
                   <ul>
                      @foreach (var actor in Model.CurrentMovie.Cast)
@@ -87,7 +104,12 @@
                      <li class="media">
                         
                         <div class="media-body">
-                           <h5 class="mt-0 mb-1">User <a href="Profile?useriden=@rev.User_Identification">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i> </h5>
+                           @if(rev.Rating == null){
+                              <h5 class="mt-0 mb-1">User <a href="Profile?useriden=@rev.User_Identification">@rev.User_Name</a> <i>had this to say about @Model.CurrentMovie.Title</i> </h5>
+                           }
+                           else{
+                              <h5 class="mt-0 mb-1">User <a href="Profile?useriden=@rev.User_Identification">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i> </h5>
+                           }
                            <div class="col-sm-10" style="background-color: white;">
                               <p style="margin-left:15px;">
                               @rev.Description
