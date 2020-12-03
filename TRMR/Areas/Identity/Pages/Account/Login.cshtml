@@ -1,133 +1,45 @@
-﻿@page
+﻿@page 
 @model LoginModel
-
 @{
     ViewData["Title"] = "Log in";
 }
 
- @{string reelName = "";}
-
-@inject SignInManager<ApplicationUser> SignInManager 
-@inject UserManager<ApplicationUser> UserManager
-
-@if (SignInManager.IsSignedIn(User)){ 
-   ApplicationUser appUser = await UserManager.GetUserAsync(User); 
-   reelName = appUser.ReelName; 
-   }
-
-
-<nav > 
-   <a href="~/Index" > 
-      <div  >   
-         <img class="logopic" src="~/images/MVRL.png" alt="Movie Reel Pic" width="60" height="20">
-         <div class="logo">
-         <div class="toplogo" >TOTALLY REEL</div> <br> <div class=" logobottom">MOVIE REVIEW</div> </div>      
-      </div>
-   </a>
-
-   <a href="~/MovieList">Movie List</a>
-   <a href="~/About">About</a>
-
-    @if (SignInManager.IsSignedIn(User)){ 
-         <a href="~/Login">Currently Logged in as: @reelName </a> 
-         <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" role="button">Profile</a>
-          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Logout" role="button">Logout</a>
-      }
-      else{
-         <a href="~/Login">Not Currently Logged In</a>
-          <a class="btn btn-light right"  asp-area="Identity" asp-page="/Account/Register" role="button">Register</a>
-          <a class="btn btn-light right" asp-area="Identity" asp-page="/Account/Login" role="button">Login</a>
-      }
-  
-  
-
- <form class="form-inline my-2 my-lg-0 ml-auto right sh ">
-        <input class="form-control " type="search" placeholder="Search a movie..." aria-label="aearch">
-        <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3  " type="submit">Search</button>
-      </form>
-</nav>
-
-
-
-<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
-<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
-<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
-<hr> <!-- Replace later with proper css. This is just to add spacing between nav bar and h1 -->
-
-
 <h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Input.Email"></label>
-                    <input asp-for="Input.Email" class="form-control" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Input.Password"></label>
-                    <input asp-for="Input.Password" class="form-control" />
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label asp-for="Input.RememberMe">
-                            <input asp-for="Input.RememberMe" />
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Log in</button>
-                </div>
-                <div class="form-group">
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
-                </div>
-            </form>
-        </section>
-    </div>
-    @* <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Use another service to log in.</h4>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
-    </div> *@
+<div class="modal-dialog" id="myModal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4>Use a local account to log in.</h4> </div>
+		<div class="modal-body">
+			<form id="account" method="post">
+				<hr />
+				<div asp-validation-summary="All" class="text-danger"></div>
+				<div class="form-group">
+					<label asp-for="Input.Email"></label>
+					<input asp-for="Input.Email" class="form-control" /> <span asp-validation-for="Input.Email" class="text-danger"></span> </div>
+				<div class="form-group">
+					<label asp-for="Input.Password"></label>
+					<input asp-for="Input.Password" class="form-control" /> <span asp-validation-for="Input.Password" class="text-danger"></span> </div>
+				<div class="form-group">
+					<div class="checkbox">
+						<label asp-for="Input.RememberMe">
+							<input asp-for="Input.RememberMe" /> @Html.DisplayNameFor(m => m.Input.RememberMe) </label>
+					</div>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Log in</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<form>
+				<div class="form-group">
+					<p> <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a> </p>
+					<p> <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a> </p>
+					<p> <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a> </p>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
 @section Scripts {

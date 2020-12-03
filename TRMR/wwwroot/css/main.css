@@ -1,376 +1,362 @@
-﻿
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+﻿body, html {
+    height: 100%;
+    width: 100%;
 }
 
-.flip-card {
-	background-color: transparent;
-	height : 540px;
-	width : 360px;
-	perspective: 1000px;
-}
-  
-.flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.6s;
-	transform-style: preserve-3d; 
-}
-  
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
- }
-  
-.flip-card-front, .flip-card-back {
-    position: absolute;
-	height : 540px;
-	width : 360px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden; 
-}
-
-.flip-card-back {
-	padding: 10px;
-	background-color: #57737a;
-	color: white;
-	transform: rotateY(180deg);
+body {
+    margin: 0px 0px 0px 0px;
+	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	background-color: rgb(230, 229, 229);
 }
 
 #Welcome h1 {
-	font-size: 45px;
-	text-align: center;
-	padding: 0px; 
-	line-height: .5;
-	margin-top: 15px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	
+    font-size: 45px;
+    text-align: center;
+    padding: 0px;
+    line-height: .5;
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 #Welcome h2 {
-	font-size: 45px;
-	text-align: center;
-	padding: 0px; 
-	line-height: .7;
-	margin-top: 15px;
-	font-weight: bold;
-}
-
-body{
-	margin: 0px 0px 0px 0px;
-	font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 45px;
+    text-align: center;
+    padding: 0px;
+    line-height: .7;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 nav {
-	background-color: #57737a;
-	overflow: hidden;
-	top: 0;
-	z-index: 100;
-	position: fixed;
-	width: 100%;
+    background-color: #57737a;
+    overflow: hidden;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
 }
 
 nav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	font-size: 17px;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
 }
 
 a {
-	text-decoration: none;
-	color: #000000;
+    text-decoration: none;
+    color: #000000;
 }
 
 a:hover {
-	color: #FCFFF5;
-	background-color: grey;
-	text-decoration: none;
+    color: #FCFFF5;
+    background-color: grey;
+    text-decoration: none;
 }
 
 .active {
-	color: #FCFFF5;
-	background-color: grey;
+    color: #FCFFF5;
+    background-color: grey;
 }
 
 main {
-	color: #193441;
-	background-color: rgb(230, 229, 229);
-	padding: 15px;
-	z-index: 0;
-	margin-top: 50px;
+    color: #193441;
+    background-color: rgb(230, 229, 229);
+    padding: 15px;
+    z-index: 0;
+    margin-top: 50px;
 }
 
-#Welcome{
-	margin-top: 105px;
-
+#Welcome {
+    margin-top: 105px;
 }
 
 /*https://stackoverflow.com/questions/5306640/how-to-set-bullet-colors-in-ul-li-html-lists-via-css-without-using-any-images-or*/
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
-	padding-left: 1em;
-	text-indent: -.7em;
+    padding-left: 1em;
+    text-indent: -.7em;
 }
 
 .MovieList li::before {
-	content: '📽️';
+    content: '📽️';
 }
 
 .MovieFactList li::before {
-	content: "🎬";
+    content: "🎬";
 }
 
 .reviewList ul li::before {
-	list-style: none;
-	content: "";
+    list-style: none;
+    content: "";
 }
 
 .reviewList h3 {
-  background-color: #4e4f4f;
-  color: #f2f2f2;
-  padding: 5px 15px;
-  width:100%;
- 
+    background-color: #4e4f4f;
+    color: #f2f2f2;
+    padding: 5px 15px;
+    width: 100%;
 }
 
 .reviewList a {
-	color: #aea8a8;
+    color: #aea8a8;
 }
 
 .reviewList {
-	overflow: auto;
-	clear: right;
-
+    overflow: auto;
+    clear: right;
 }
 
 #Welcome {
-	text-align: center;
+    text-align: center;
 }
 
-.rank1, .rank2, .rank3{
-	background-color: rgba(160, 192, 196, 0.53); 
-	padding-top: 5px;
+.rank {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    background-color: rgba(223, 217, 217, 0.51);
+    border-top: 10px solid rgb(89, 91, 92);
+    margin: 15px;
 }
 
-.rank1 {
-	background-color: rgba(218, 218, 218, 0.51)
+.ranking {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7d7d7d;
 }
 
-.rank2{
-	background-color: rgba(152, 158, 159, 0.304);  
-} 
-
-.rank3{
-	background-color: rgba(152, 158, 159, 0.564);  
+.rank li {
+    border-bottom: 1px solid #7d7d7d;
+    padding: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-.nav2{
-	margin-top:53px;
-	background-color:#93a8ac;
+.nav2 {
+    margin-top: 53px;
+    background-color: #93a8ac;
 }
 
 .col-1 {
-	background-color: rgba(120, 108, 108, 0.749);
-	font-size: 15px;
-	padding: 7px 5px; 
-	width:100%;
-	background-clip: content-box;
-	height: 100px;
+    background-color: rgba(120, 108, 108, 0.749);
+    font-size: 15px;
+    padding: 7px 5px;
+    width: 100%;
+    background-clip: content-box;
+    height: 100px;
 }
 
 .col-1 a {
-	float: left;
-	color: #f2f2f2;
-	width: 100px;
-	padding: 12px 0px;
-	font-size: 15x;
+    float: left;
+    color: #f2f2f2;
+    width: 100px;
+    padding: 12px 0px;
+    font-size: 15x;
 }
 
 .col-1 li {
-	padding: 0px;
-	margin: 0px;
-} 
+    padding: 0px;
+    margin: 0px;
+}
 
 #MovieIndex {
-	padding: 0px;
-	margin:110px;
+    padding: 0px;
+    margin: 110px;
 }
 
 #MovieIndex h3 {
-	border-bottom: 1px dotted #7d7d7d;
-	margin-top: 80px;
+    border-bottom: 1px dotted #7d7d7d;
+    margin-top: 80px;
 }
 
 #MovieIndex h2 {
-	text-align: center;
-	font-size: 50px;
+    text-align: center;
+    font-size: 50px;
 }
 
 #MovieDetails main,
 #MovieList main,
 #Welcome main {
-	padding: 0px;
-	
+    padding: 0px;
 }
 
 .right {
-	float: right;
-	margin: 5px;
-	margin-right: 10px;
-	position: relative;
+    float: right;
+    margin: 5px;
+    margin-right: 10px;
+    position: relative;
 }
 
 .left {
-	float: left;
-	margin: 5px;
-	margin-left: 10px;
-	position: relative;
+    float: left;
+    margin: 5px;
+    margin-left: 10px;
+    position: relative;
 }
 
 .title {
-	margin-top:0px;
-	padding:10px;
-	background-color: lightgrey;
-	background-color: rgba(101, 101, 101, 0.141);
-	background-color: rgb(236, 242, 245);
-	color:white;
-	color: #193441;
-	text-align: center;
+    margin-top: 0px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #070707;
+    text-align: center;
 }
 
-.col-11{
-	margin:0px;
-	padding:0px;
-	text-align:center;
-	background-color: lightgrey;
-
+.col-11 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: lightgrey;
 }
 
-.carousel-inner > .carousel-item >img{
-	margin: 0px;
-	padding: 0px;  
-}
-
-.mainpic{
-	margin-top:0px;
-	padding:100px;
-	background-color: rgb(10, 7, 7);
-	color:white;
-}
-
-.carousel-item {
-    background-attachment: fixed;
-    background-repeat: no-repeat; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-	background-size: cover;
-	background-color: #090909;
-	height : 540px;
-	width: 360px;	
-}
-
-.row, body{
-	background-color:rgb(230, 229, 229);
+.mainpic {
+    margin-top: 0px;
+    padding: 100px;
+    background-color: rgb(10, 7, 7);
+    color: white;
 }
 
 img {
-	opacity: 0.7;
-  }
-
-.lists{
-	height:100%;
+    opacity: 0.7;
 }
 
-.h2{
-	font-family: Verdana;
+.lists {
+	margin: 0px 10px 50px;
 }
 
-#MovieDetails{
-	margin-top:105px;
+#MovieDetails {
+    margin-top: 105px;
 }
 
-#MovieDetails img{
-	padding-top: 15px;
-	opacity: 1;
-
+#MovieDetails img {
+    padding-top: 15px;
+    opacity: 1;
 }
 
 footer {
-	font-size: 10pt;
-	font-style: italic;
-	width: 100%;
-	position: fixed;
-	font-family: serif;
-	background-color: #7b7676;
-	color: #dae3e4;
+    font-size: 10pt;
+    font-style: italic;
+    width: 100%;
+    position: fixed;
+    font-family: serif;
+    background-color: #7b7676;
+    color: #dae3e4;
 }
 
-.logo{
-	float:right;
-	color:black;
+.logo {
+    float: right;
+    color: black;
 }
 
 .logobottom {
-	font-size: 14px;
-	line-height: 0;
-	letter-spacing: .5px;
-	float:right;
+    font-size: 14px;
+    line-height: 0;
+    letter-spacing: .5px;
+    float: right;
+    padding-bottom: -20px;
 }
 
-.toplogo{
-	letter-spacing: 1.2px;
-	font-size: 14px;
-	float:right;
+.toplogo {
+    letter-spacing: 1.2px;
+    font-size: 14px;
+    float: right;
 }
 
-#mainnav a:first-child{
-	margin:0px;
-	padding:0px;
-	padding-top: 10px;
-	padding-left:5px;
+#mainnav a:first-child {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    padding-left: 5px;
 }
 
-.logopic{
-	float:left;
-	margin-left: 5px;
+.logopic {
+    float: left;
+    margin-left: 5px;
 }
 
-.sh{
-	padding-top: 5px;
+.sh {
+    padding-top: 5px;
 }
 
-.sh2{
-	margin-top: 5px;
+.sh2 {
+    margin-top: 5px;
 }
 
-body,
-html {
-  height: 100%;
-  width: 100%;
+.col-container {
+    display: table;
+    width: 100%;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  color: #333;
-  /* background-color: #f4f4f4; */
+.rank {
+    display: table-cell;
+}
+
+.movie-title {
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    overflow: hidden;
+}
+
+#About {
+	padding-left: 30px;
+}
+
+#manageProfile{
+	margin-top: 20px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 540px;
+    width: 360px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+	height: 540px;
+	width: 360px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    height: 540px;
+	width: 360px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    padding: 10px;
+    background-color: #57737a;
+    color: white;
+    transform: rotateY(180deg);
 }

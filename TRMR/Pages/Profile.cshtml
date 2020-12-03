@@ -1,4 +1,5 @@
-﻿@page
+﻿
+@page
 @model TRMR.Pages.ProfileModel
 @{
     ViewData["Title"] = /*Model.CurrentUser.User_Id + "'s " +*/ "Profile";
@@ -6,18 +7,17 @@
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager
 
-
 <main>
    <strong>
-      <u>
+      <b>
          <h2> @Model.CurrentUser.ReelName's Profile Page:</h2> 
-      </u>
+      </b>
    </strong>
    <ul>
       <div class="profileList">
-         <li><u>@Model.CurrentUser.ReelName's favorite movie(s):</u> @Model.CurrentUser.FavMovie </li>
-         <li><u>@Model.CurrentUser.ReelName's favorite genre(s):</u> @Model.CurrentUser.FavGenre </li>
-         <li><u>@Model.CurrentUser.ReelName's fun fact:</u> @Model.CurrentUser.Bio </li>
+         <li><b>Favorite movie(s):</b> @Model.CurrentUser.FavMovie</li>
+         <li><b>Favorite genre(s):</b> @Model.CurrentUser.FavGenre </li>
+         <li><b>Fun fact:</b> @Model.CurrentUser.Bio </li>
       </div>
    </ul>
 </main>
