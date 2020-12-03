@@ -34,41 +34,77 @@
 				<li><a href="/MovieList#ShortFilm"> Short Film </a></li>
 			</ul>
 		</nav>
+		@{
+			double avg = 0;
+			double rating = 0;
+			int nullcount = 0;
+			bool noReviews = true;
+			foreach (var rev in Model.Reviews)
+			{
+				if(rev.Rating != null)
+				{
+					Double.TryParse(rev.Rating, out rating);
+					avg += rating;
+					noReviews = false;
+				}
+				else
+				{
+					nullcount ++;
+				}
+			}
+			avg /= (Model.Reviews.Count() - nullcount);
+			
+		}
 		<div id="MovieDetails">
 			<main role="main" class="pb-3">
 				<div class="row content">
 					<div class="col"> @{string link = @Model.CurrentMovie.Title + ".png";} <img id="Movie_Poster_Pic" src="~/images/@link" alt="Movie Poster Pic" width="266" height="400" style="float:right;">
 						<h2>@Model.CurrentMovie.Title</h2>
 						<div class="MovieFactList">
+						<ul>
+							@* <li>Movie Title: @Model.CurrentMovie.Title</li> *@
+							@if (noReviews)
+							{
+								<h4>No Reel Reviews yet! (Leave one below!) </h4>
+							}
+							else{
+								<h4>Average Rating: @avg.ToString()</h4>
+							}
+							<li>Director: @Model.CurrentMovie.Director</li>
+							<li>Starring: @Model.CurrentMovie.Starring</li>
+							<li>Genre: @Model.CurrentMovie.Genre</li>
+							<li>Age Rating: @Model.CurrentMovie.Age_Rating</li>
 							<ul>
-								<li>Movie Title: @Model.CurrentMovie.Title</li>
-								<li>Director: @Model.CurrentMovie.Director</li>
-								<li>Starring: @Model.CurrentMovie.Starring</li>
-								<li>Genre: @Model.CurrentMovie.Genre</li>
-								<li>Age Rating: @Model.CurrentMovie.Age_Rating</li>
-								<li>Cast</li>
-								<ul> @foreach (var actor in Model.CurrentMovie.Cast) {
-									<li>@actor</li> } </ul>
+								@foreach (var actor in Model.CurrentMovie.Cast)
+								{
+								<li>@actor</li>
+								}
 							</ul>
+               			</ul>
 						</div>
 						<h2>Movie Description</h2>
 						<p>@Model.CurrentMovie.Details</p>
 						<div class="reviewList">
 							<h2>Reel Reviews</h2> @if(Model.Reviews.Count() == 0){
 							<p>Don't be shy... be the first to write a reel review!</p> }
-							<ul class="list-unstyled"> @foreach (var rev in Model.Reviews) {
+							<ul class="list-unstyled"> 
+								@foreach (var rev in Model.Reviews) {
 								<li class="media">
 									<div class="media-body">
-										<h5 class="mt-0 mb-1">User <a href="Profile?userName=@rev.User_Name">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i> </h5>
-										<div class="col-sm-10" style="background-color: white;">
+											@if(rev.Rating == null){
+												<h5 class="mt-0 mb-1">User <a href="Profile?useriden=@rev.User_Identification">@rev.User_Name</a> <i>had this to say about @Model.CurrentMovie.Title</i> </h5>
+											}
+											else{
+												<h5 class="mt-0 mb-1">User <a href="Profile?useriden=@rev.User_Identification">@rev.User_Name</a> <i>gives @Model.CurrentMovie.Title a @rev.Rating /10 </i> </h5>
+											}
 											<p style="margin-left:15px;"> @rev.Description </p>
 										</div>
-									</div>
 								</li>} </ul>
 							<h3 style="background-color: #3D7070;"> Share Your Reel Review</h3> 
                      @if (SignInManager.IsSignedIn(User)){ //for testing you can just replace the conditional with "true" to see the page as if you were a signed in user 
                         <form method="post" id="review" asp-area="Identity" asp-page="~/MovieTemplate?id=@Model.CurrentMovie.Id" asp-route-returnUrl="~/MovieTemplate?id=@Model.CurrentMovie.Id">
                            <input asp-for="TheReview.User_Name" type="hidden" value="@reelName">
+						   <input asp-for="TheReview.User_Identification" type="hidden" value="@userId">
                            <input asp-for="TheReview.Movie_Id" type="hidden" value="@Model.CurrentMovie.Id">
                            <div class="form-group row">
                               <label class="col-sm-2 col-form-label"> Leave a Reel Review!</label>

@@ -23,6 +23,69 @@
 		<li><a href="/MovieList#ShortFilm"> Short Film </a></li>
 	</ul>
 </nav>
+
+@{
+   var highestReviewed = new List<(string, string, int)>();
+   var lolXDsoRandom = new List<(string, string, int)>();
+   double avg = 0;
+   double rating = 0;
+   int nullcount = 0;
+   int notSameMovies = 0;
+   bool noReviews = true;
+   foreach(var movie in Model.Movies)
+   {
+      foreach (var rev in Model.Reviews)
+      {
+         if(rev.Movie_Id == movie.Id)
+         {
+            if(rev.Rating != null)
+            {
+               Double.TryParse(rev.Rating, out rating);
+               avg += rating;
+               noReviews = false;
+            }
+            else
+            {
+               nullcount ++;
+            }
+         }
+         else
+            notSameMovies++;
+      }
+      if(Model.Reviews.Count() - nullcount - notSameMovies != 0)
+         avg /= (Model.Reviews.Count() - nullcount - notSameMovies);
+      else
+         avg = 0;
+      nullcount = 0;
+      notSameMovies = 0;
+      if(!noReviews)
+         highestReviewed.Add((movie.Title, Math.Abs(avg).ToString(), movie.Id));
+      lolXDsoRandom.Add((movie.Title, Math.Abs(avg).ToString(), movie.Id));
+      avg = 0;
+      noReviews = true;
+
+   }
+   highestReviewed = highestReviewed.OrderByDescending (t => t.Item2).ToList();
+   lolXDsoRandom = lolXDsoRandom.OrderBy(a => Guid.NewGuid()).ToList();
+
+   var mostReviewed = new List<(string, string, int)>();
+   int reviewCount = 0;
+   foreach(var movie in Model.Movies)
+   {
+      foreach (var rev in Model.Reviews)
+      {
+         if(rev.Movie_Id == movie.Id)
+         {
+            reviewCount++;
+         }
+      }
+      mostReviewed.Add((movie.Title, reviewCount.ToString(), movie.Id));
+      reviewCount = 0;
+   }
+   mostReviewed = mostReviewed.OrderByDescending (t => t.Item2).ToList();
+
+}
+
 <div id="Welcome">
 	<main role="main">
 		<div class="row">
@@ -64,123 +127,28 @@
 							<div class="col rank">
 								<h2> <div class="ranking">Top 10 Movies</div> </h2>
 								<ul>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
+									@for(int i = 0; i < 10 && i < highestReviewed.Count; i++)
+                           			{
+                            		  <li><a href = "MovieTemplate?id=@highestReviewed[i].Item3"><h3>@highestReviewed[i].Item1 scores a @highestReviewed[i].Item2 out of 10! </h3></a></li>
+                           			}
 								</ul>
 							</div>
 							<div class="col rank">
 								<h2> <div class="ranking">Featured Films</div> </h2>
 								<ul>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                           			@for(int i = 0; i < 10; i++)
+                           			{
+                              			<li><a href = "MovieTemplate?id=@lolXDsoRandom[i].Item3"><h3>@lolXDsoRandom[i].Item1 </h3></a></li>
+                           			}
 								</ul>
 							</div>
 							<div class="col rank">
-								<h2><div class="ranking">Fan Favorites</div></h2>
+								<h2><div class="Hottest Hits">Fan Favorites</div></h2>
 								<ul>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
-									<li>
-										<h3>MOVIE ONE</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</li>
+									@for(int i = 0; i < 10; i++)
+									{
+										<li><a href = "MovieTemplate?id=@mostReviewed[i].Item3"><h3>@mostReviewed[i].Item1 has @mostReviewed[i].Item2 Reel Reviews!</h3></a></li>
+									}
 								</ul>
 							</div>
 						</div>

@@ -8380,23 +8380,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/assyasellak/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/mark/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/assyasellak/final/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
+      "projectUniqueName": "/mnt/c/Users/MHOLCOMB/repos/blah/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
       "projectName": "TRMR",
-      "projectPath": "/Users/assyasellak/final/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
-      "packagesPath": "/Users/assyasellak/.nuget/packages/",
-      "outputPath": "/Users/assyasellak/final/Totally-Reel-Movie-Review/TRMR/obj/",
+      "projectPath": "/mnt/c/Users/MHOLCOMB/repos/blah/Totally-Reel-Movie-Review/TRMR/TRMR.csproj",
+      "packagesPath": "/home/mark/.nuget/packages/",
+      "outputPath": "/mnt/c/Users/MHOLCOMB/repos/blah/Totally-Reel-Movie-Review/TRMR/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/assyasellak/.nuget/NuGet/NuGet.Config"
+        "/home/mark/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8473,7 +8469,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -28,11 +28,13 @@ namespace TRMR.Pages
         }
 
         public List<Movie> Movies = new List<Movie>(); 
+        public List<Review> Reviews {get; set;} = new List<Review>();
         
 
         public async void OnGet()
         {
             this.Movies.AddRange(_dbContext.Movies);
+            this.Reviews.AddRange(_dbContext.Review);
         }
     }
 }
